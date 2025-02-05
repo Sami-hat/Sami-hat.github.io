@@ -132,6 +132,27 @@ p {
 }
 
 
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 24px; /* For Font Awesome icons; images will ignore this */
+}
+
+.tech-icons img {
+  width: 24px;
+  height: 24px;
+}
+
 /*---------------------------------------
     GENERAL               
 -----------------------------------------*/
