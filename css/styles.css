@@ -415,7 +415,10 @@ font-size: 2.2em;
   transform-origin: left bottom;
   transform: translate(0, 2.125rem) scale(1.5);
 }
-
+body {
+  font-family: var(--base-font-family);
+  overflow-x: hidden;
+}
 .contact-form ::-webkit-input-placeholder {
   opacity: 0;
   transition: inherit;
