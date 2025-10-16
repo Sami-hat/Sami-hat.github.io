@@ -85,15 +85,20 @@
                         <h1 class="hero-title">Sami Hatoum</h1>
                     </div>
 
-                    <div class="col-lg-10 col-md-10 col-7 mt-4">
+                    <div class="col-lg-11 col-md-11 col-8 mt-3">
                         <h3 class="mb-4">About Me</h3>
 
                         <p>
-                            Hello! I am a Master's student at UCL pursuing an MSc in AI and Medical
-                            Imaging, building upon my foundation as a Computer Science graduate from the University of
-                            St Andrews. My experience in consulting and rigorous technical development has equipped me
-                            to deliver clear insights and robust solutions. I am passionate about applying AI expertise
-                            to drive innovation in healthcare technology.
+                            I'm Sami Hatoum, a Computer Science graduate from St Andrews currently pursuing my MSc in AI
+                            and Medical Imaging at UCL. I build software that combines machine learning with practical
+                            engineering—from deploying sentiment analysis systems on AWS to creating mobile apps that
+                            people actually use. I've worked at PwC on AI consulting projects and
+                            love tackling problems that span the full stack, whether that's optimising cloud
+                            infrastructure, training neural networks, or designing clean user interfaces. Beyond coding,
+                            I'm a meticulous
+                            tester and report writer. You can find examples of my technical documentation and analysis
+                            in
+                            my report portfolio.
                         </p>
                     </div>
 
@@ -117,35 +122,28 @@
 
                 <div class="col-lg-8 col-md-8 col-8">
                     <div class="experience-item">
-                        <h3>Client-Side Consulting</h3>
+                        <h3>Client-Side Consulting Intern</h3>
                         <p>
-                            Worked client-side as part of an agile team, conducting thorough evaluations of business
-                            operations, market analysis, and financial analysis.
+                            Collaborated with a cross-functional Agile team to identify 120 process-level risks,
+                            uncovering £20K in annual savings. Conducted ROI modelling with energy-consumption
+                            simulations to assess a proposed air cargo facility's feasibility.
                             <br><br>
-                            Led conceptual design processes, integrating advanced technologies, sustainability, and
-                            effiency.
-
-                            Managed the implementation of a large-scale project, overseeing timelines, resource
-                            allocation, and
-                            business continuity plans.
+                            Architected a facility concept with solar power and automation, modelling an estimated 18%
+                            OpEx reduction based on historical cost benchmarks. Orchestrated facility rollout to
+                            maintain 95% on-time delivery based on simulation scenarios and existing SLA benchmarks.
                         </p>
                     </div>
                     <div class="experience-item">
-                        <h3>Digital Consulting (AI)</h3>
+                        <h3>Software Consulting Intern (AI)</h3>
                         <p>
-                            Designed and optimised a deep learning model for sentiment classification
-                            using TensorFlow, employing advanced tokenisation
-                            techniques such as WordPiece and Byte-Pair Encoding. Collaborated with senior ML
-                            engineers to fine-tune hyperparameters, improving model accuracy.
+                            Built a production sentiment analysis system using TensorFlow LSTM architecture, achieving
+                            87% accuracy on a balanced dataset of 25,000 customer reviews with proper train/test splits.
+                            Containerised the model with Flask API wrapper and deployed to AWS EC2 with auto-scaling,
+                            load tested to handle 150 req/s with average 400ms response time.
                             <br><br>
-                            Integrated the trained model into a real-time inference system using Docker and Kubernetes,
-                            ensuring seamless processing of high-volume, unstructured data.
-                            <br><br>
-                            Automated data ingestion from multiple sources and implemented advanced feature engineering
-                            techniques,
-                            including entity extraction and n-gram generation. Designed a multi-step pre-processing
-                            pipeline to enhance data
-                            quality and optimise model inputs.
+                            Implemented monitoring via CloudWatch and established model retraining pipeline triggered by
+                            accuracy degradation below 85% threshold. Optimised preprocessing pipeline with pandas
+                            vectorisation, reducing daily batch processing time by 60%.
                         </p>
                     </div>
                 </div>
@@ -163,123 +161,152 @@
     <section class="projects section-padding" id="projects">
 
         <div class="row justify-content-center">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mb-4">
                 <h2>Projects</h2>
             </div>
         </div>
 
+        <div class="container">
+            <!-- First Row -->
+            <div class="row mb-4">
+                <!-- Food Waste Management App -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="project-card">
+                        <header class="project-header">
+                            <div class="project-title">
+                                <h3>Food Waste Management App</h3>
+                            </div>
+                            <div class="tech-icons">
+                                <i class="fab fa-html5" title="HTML5"></i>
+                                <i class="fab fa-css3-alt" title="CSS3"></i>
+                                <i class="fab fa-js-square" title="JavaScript"></i>
+                                <img src="..\images\react.png" alt="React" title="React">
+                                <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL">
+                                <img src="..\images\aws.png" alt="AWS" title="AWS">
+                                <img src="..\images\ml.png" alt="Machine Learning" title="Machine Learning">
+                            </div>
+                        </header>
+                        <p>
+                            A React Native food tracking app to help reduce household food waste, with 30+ beta users
+                            testing over 3 months. Deployed Node.js REST API on Vercel with PostgreSQL RDS backend,
+                            implementing automated daily backups and CloudWatch monitoring. Integrated Spoonacular
+                            Recipe API with Redis caching to suggest recipes based on expiring ingredients, achieving
+                            consistent 300ms response times under load. Established push notifications using AWS SNS to
+                            remind users about approaching expiration dates.
+                        </p>
+                    </div>
+                </div>
 
-        <div class="row about-third justify-content-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <header class="project-header">
-                    <div class="project-title">
-                        <h3>Food Waste Reduction App</h3>
+                <!-- Deep Learning Medical Image Segmentation -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="project-card">
+                        <header class="project-header">
+                            <div class="project-title">
+                                <h3>Deep Learning Medical Image Segmentation</h3>
+                            </div>
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <img src="..\images\ml.png" alt="Deep Learning - PyTorch"
+                                    title="Deep Learning - PyTorch">
+                            </div>
+                        </header>
+                        <p>
+                            Current MSc research project. Developing a robust and well-documented Python software
+                            package for medical image segmentation, applied to the prostate anatomy in T2-weighted MR
+                            images from prostate cancer patients. Utilising deep learning techniques with PyTorch,
+                            the project aims to improve segmentation accuracy and efficiency.
+                        </p>
                     </div>
-                    <div class="tech-icons">
-                        <i class="fab fa-html5" title="HTML5"></i>
-                        <i class="fab fa-css3-alt" title="CSS3"></i>
-                        <i class="fab fa-js-square" title="JavaScript"></i>
-                        <img src="..\images\react.png" alt="React" title="React">
-                        <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL">
-                        <img src="..\images\aws.png" alt="AWS" title="AWS">
-                        <i class="fas fa-brain" title="Machine Learning - TensorFlow + OpenCV"></i>
-                        <img src="..\images\figma.png" alt="Figma" title="Figma">
+                </div>
+
+                <!-- Cryptographically Secure File Server -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="project-card">
+                        <header class="project-header">
+                            <div class="project-title">
+                                <h3>Cryptographically Secure File Server</h3>
+                            </div>
+                            <div class="tech-icons">
+                                <i class="fab fa-java" title="Java"></i>
+                                <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL">
+                                <img src="..\images\aws.png" alt="AWS" title="AWS">
+                            </div>
+                        </header>
+                        <p>
+                            An end-to-end encrypted file storage system in Java, supporting 50+ concurrent users.
+                            Implemented zero-knowledge and zero-trust architecture ensuring complete data privacy with
+                            multi-layer encryption. Designed granular access control system, managing permissions for
+                            thousands of files without revealing any usernames, filenames, or the file contents.
+                        </p>
                     </div>
-                </header>
-                <p>
-                    Developing a food waste management web app for grocery tracking and waste reduction using React,
-                    Node.js, and PostgreSQL, hosted on AWS.
-                    Integrating AI-driven image recognition with TensorFlow and OpenCV for grocery input via photos.
-                    Implemented personalised recipe suggestions through the Suggestic REST API and providing food
-                    preservation tips to promote sustainability.
-                    Added notifications to reduce waste and focusing on clear UX/UI design with Figma to enhance
-                    user experience.
-                </p>
+                </div>
             </div>
-        </div>
 
-        <div class="row about-third justify-content-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <header class="project-header">
-                    <div class="project-title">
-                        <h3>Procedural Content Generation</h3>
+            <!-- Second Row -->
+            <div class="row">
+                <!-- Automated Algorithm Selection Tool -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="project-card">
+                        <header class="project-header">
+                            <div class="project-title">
+                                <h3>Automated Algorithm Selection</h3>
+                            </div>
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fas fa-brain" title="Machine Learning"></i>
+                            </div>
+                        </header>
+                        <p>
+                            A solver selection tool in Python enhanced using Scikit-learn to predict optimal solver
+                            performance per instance. Benchmarked models against SBS/VBS baselines using classification
+                            and regression techniques, with feature normalisation and hyperparameter tuning to improve
+                            accuracy.
+                        </p>
                     </div>
-                    <div class="tech-icons">
-                        <i class="fab fa-java" title="Java"></i>
-                        <img src="..\images\tableau.png" alt="Tableau" title="Tableau">
-                    </div>
-                </header>
-                <p>
-                    A procedural level generation tool for Sokoban built in Java, combining pseudo-random generation,
-                    bijective entity-mapping, and a
-                    Two-Archive evolutionary algorithm to balance challenge and diversity. The tool produces unique,
-                    playable puzzles of varying difficulty, evaluated by solvers.
-                </p>
-            </div>
-        </div>
+                </div>
 
-        <div class="row about-third justify-content-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <header class="project-header">
-                    <div class="project-title">
-                        <h3>Cryptographically Secure File Server</h3>
+                <!-- Multi-Label Classification -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="project-card">
+                        <header class="project-header">
+                            <div class="project-title">
+                                <h3>Multi-Label Image Classification</h3>
+                            </div>
+                            <div class="tech-icons">
+                                <i class="fab fa-python" title="Python"></i>
+                                <img src="..\images\matlab.png" alt="MATLAB" title="MATLAB">
+                            </div>
+                        </header>
+                        <p>
+                            Investigated the segmentation and multi-label classification of clustered objects in images
+                            through imperative programming approaches like convolutional edge detection and watershed
+                            segmentation, rather than CNNs or unsupervised ML. Focused on fine-tuning stages of
+                            pre-processing (Feature extraction: contrast stretching, smoothening, and cleaning) to then
+                            segment and classify different objects contained in the images.
+                        </p>
                     </div>
-                    <div class="tech-icons">
-                        <i class="fab fa-java" title="Java"></i>
-                        <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL">
-                        <img src="..\images\aws.png" alt="AWS" title="AWS">
-                    </div>
-                </header>
-                <p>
-                    A zero-knowledge, zero-trust file server. This server has no access to unencrypted data, file-keys,
-                    or filenames, with
-                    multi-layer encryption and granular access control. Built both client and server components,
-                    focusing on secure data
-                    handling, key exchange, and minimal UX/UI. Deployment done via AWS and PostgreSQL.
-                </p>
-            </div>
-        </div>
+                </div>
 
-        <div class="row about-third justify-content-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <header class="project-header">
-                    <div class="project-title">
-                        <h3>Automated Algorithm Selection Tool</h3>
+                <!-- Sokoban Procedural Puzzle Generator -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="project-card">
+                        <header class="project-header">
+                            <div class="project-title">
+                                <h3>Sokoban Procedural Puzzle Generator</h3>
+                            </div>
+                            <div class="tech-icons">
+                                <i class="fab fa-java" title="Java"></i>
+                                <img src="..\images\tableau.png" alt="Tableau" title="Tableau">
+                            </div>
+                        </header>
+                        <p>
+                            A procedural content generation tool written in Java for a PSPACE decision problem –
+                            Sokoban. Combines stochastic generation, entity-mapping constraints, and a Two-Archive
+                            evolutionary algorithm to balance challenge and diversity. Generates 1000+ unique, playable
+                            puzzles of varying difficulty, validated by solvers.
+                        </p>
                     </div>
-                    <div class="tech-icons">
-                        <i class="fab fa-python" title="Python"></i>
-                        <i class="fas fa-brain" title="Machine Learning - TensorFlow"></i>
-                    </div>
-                </header>
-
-                <p>An automated algorithm selection tool using Python's Scikit-learn and MAXSAT12-PMS data, predicting
-                    the most effective solver per instance.
-                    Compared models against Single Best Solver (SBS) and Virtual Best Solver (VBS) baselines, applying
-                    classification/regression, feature normalisation, and
-                    hyper-parameter tuning to improve accuracy</p>
-                </p>
-            </div>
-        </div>
-
-        <div class="row about-third justify-content-center">
-            <div class="col-lg-6 col-md-6 col-12">
-                <header class="project-header">
-                    <div class="project-title">
-                        <h3>Multi-Label Classification Image Processing</h3>
-                    </div>
-                    <div class="tech-icons">
-                        <i class="fab fa-python" title="Python"></i>
-                        <img src="..\images\matlab.png" alt="MATLAB" title="MATLAB">
-                    </div>
-                </header>
-                <p>
-                    Investigated the segmentation and multi-label classification of clustered objects in images through
-                    imperative programming approaches
-                    like convolutional edge detection and watershed segmentation, rather than CNNs or unsupervised ML.
-                    Focused on fine-tuning stages of pre-processing (Feature extraction: contrast stretching,
-                    smoothening, and cleaning)
-                    to then segment and classify differnet objects contained in the images
-                </p>
+                </div>
             </div>
         </div>
 
@@ -319,7 +346,7 @@
                 </div>
 
                 <div class="mx-auto col-lg-4 col-md-6 col-12">
-                    <h3 class="my-4 pt-4 pt-lg-0">Say hello</h3>
+                    <h3 class="my-4 pt-4 pt-lg-0">Get in touch</h3>
 
                     <p class="mb-1">(+44) 774-115-7779</p>
                     <p class="mb-1">(+971) 58-532-5779</p>

@@ -23,6 +23,19 @@
     font-style: normal;
 }
 
+/* Override Bootstrap container padding */
+.container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Make container slightly wider on larger screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 70%;
+  }
+}
+
 :root {
   --primary-color:        #ffd500;
   --white-color:          #ffffff;
@@ -135,11 +148,15 @@ p {
 
 .project-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 10px 15px;
   border-bottom: 1px solid #ddd;
   margin-bottom: 20px;
+}
+
+.project-header .project-title {
+  margin-bottom: 10px;
 }
 
 .tech-icons {
