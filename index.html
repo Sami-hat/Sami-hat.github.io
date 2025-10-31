@@ -136,8 +136,8 @@
                     <div class="experience-item">
                         <h3>Software Consulting Intern (AI)</h3>
                         <p>
-                            Built a production sentiment analysis system using TensorFlow LSTM architecture, achieving
-                            87% accuracy on a balanced dataset of 25,000 customer reviews with proper train/test splits.
+                            Built a sentiment analysis prototype using TensorFlow LSTM architecture, achieving 87%
+                            accuracy on a balanced dataset of 25,000 customer reviews.
                             Containerised the model with Flask API wrapper and deployed to AWS EC2 with auto-scaling,
                             load tested to handle 150 req/s with average 400ms response time.
                             <br><br>
@@ -185,14 +185,16 @@
                             </div>
                         </header>
                         <p>
-                            A PostgreSQL performance analyser in TypeScript that automatically recommends indexes by parsing query
-                            ASTs
-                            and analysing EXPLAIN plans, reducing average query time by 80%. Built a production
-                            monitoring
-                            system processing 10,000+ queries/second with sub-100ms latency, containerised with Docker
-                            and
-                            deployed on AWS with auto-scaling. Created D3.js dashboard visualising query patterns and
-                            optimisation recommendations.
+                            A PostgreSQL performance analyser that recommends indexes by parsing query ASTs and
+                            evaluating EXPLAIN plans,
+                            improving query speed by up to 80% in controlled tests and sustaining 500+ queries/second in
+                            benchmark trials
+                            Containerised with Docker and deployed on AWS using EC2, RDS (PostgreSQL), and CloudWatch
+                            monitoring, with
+                            auto-scaling and load balancing configured through ELB and ASG
+                            Designed an interactive D3.js dashboard to visualise query patterns and index
+                            recommendations, helping developers
+                            identify performance bottlenecks faster
                         </p>
                     </div>
                 </div>
@@ -265,10 +267,10 @@
                             </div>
                         </header>
                         <p>
-                            An end-to-end encrypted file storage system in Java, supporting 50+ concurrent users.
+                            An end-to-end encrypted file storage system in Java, tested with 50 concurrent sessions.
                             Implemented zero-knowledge and zero-trust architecture ensuring complete data privacy with
                             multi-layer encryption. Designed granular access control system, managing permissions for
-                            thousands of files without revealing any usernames, filenames, or the file contents.
+                            large file sets without revealing any users, filenames, or the file contents.
                         </p>
                     </div>
                 </div>
@@ -376,11 +378,15 @@
                             </div>
                         </header>
                         <p>
-                            A competing-consumer publish-subscribe messaging system using Java RMI for asynchronous event
-                            distribution across network channels. Engineered partition-based queue management with dynamic
+                            A competing-consumer publish-subscribe messaging system using Java RMI for asynchronous
+                            event
+                            distribution across network channels. Engineered partition-based queue management with
+                            dynamic
                             load balancing to ensure FIFO ordering and equitable message distribution among subscribers.
-                            Implemented comprehensive fault tolerance mechanisms including backup queues for crash recovery,
-                            connection interruption handling, message acknowledgment protocols, and duplicate detection to
+                            Implemented comprehensive fault tolerance mechanisms including backup queues for crash
+                            recovery,
+                            connection interruption handling, message acknowledgment protocols, and duplicate detection
+                            to
                             guarantee at-least-once delivery.
                         </p>
                     </div>
