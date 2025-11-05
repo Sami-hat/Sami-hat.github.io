@@ -122,6 +122,19 @@
 
                 <div class="col-lg-8 col-md-8 col-8">
                     <div class="experience-item">
+                        <h3>Software Consulting Intern (AI)</h3>
+                        <p>
+                            Built a sentiment analysis prototype using TensorFlow LSTM architecture, achieving 91%
+                            F1-score on imbalanced customer review dataset.
+                            Containerised the model with Flask API wrapper and deployed to AWS EC2 with auto-scaling,
+                            load tested to handle 150 req/s with average 400ms response time.
+                            <br><br>
+                            Implemented monitoring via CloudWatch and established model retraining pipeline triggered by
+                            accuracy degradation below 85% threshold. Optimised preprocessing pipeline with pandas
+                            vectorisation, reducing daily batch processing time by 60%.
+                        </p>
+                    </div>
+                    <div class="experience-item">
                         <h3>Client-Side Consulting Intern</h3>
                         <p>
                             Collaborated with a cross-functional Agile team to identify 120 process-level risks,
@@ -131,19 +144,6 @@
                             Architected a facility concept with solar power and automation, modelling an estimated 18%
                             OpEx reduction based on historical cost benchmarks. Orchestrated facility rollout to
                             maintain 95% on-time delivery based on simulation scenarios and existing SLA benchmarks.
-                        </p>
-                    </div>
-                    <div class="experience-item">
-                        <h3>Software Consulting Intern (AI)</h3>
-                        <p>
-                            Built a sentiment analysis prototype using TensorFlow LSTM architecture, achieving 87%
-                            accuracy on a balanced dataset of 25,000 customer reviews.
-                            Containerised the model with Flask API wrapper and deployed to AWS EC2 with auto-scaling,
-                            load tested to handle 150 req/s with average 400ms response time.
-                            <br><br>
-                            Implemented monitoring via CloudWatch and established model retraining pipeline triggered by
-                            accuracy degradation below 85% threshold. Optimised preprocessing pipeline with pandas
-                            vectorisation, reducing daily batch processing time by 60%.
                         </p>
                     </div>
                 </div>
@@ -177,7 +177,7 @@
                                 <h3>Database Query Optimiser</h3>
                             </div>
                             <div class="tech-icons">
-                                <img src="..\images\ts.png" alt="TypeScript" title="TypeScript">
+                                <i class="fab fa-python" title="Python"></i>
                                 <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL">
                                 <img src="..\images\aws.png" alt="AWS" title="AWS">
                                 <i class="fab fa-docker" title="Docker"></i>
@@ -185,16 +185,15 @@
                             </div>
                         </header>
                         <p>
-                            A PostgreSQL performance analyser that recommends indexes by parsing query ASTs and
-                            evaluating EXPLAIN plans,
-                            improving query speed by up to 80% in controlled tests and sustaining 500+ queries/second in
-                            benchmark trials
-                            Containerised with Docker and deployed on AWS using EC2, RDS (PostgreSQL), and CloudWatch
-                            monitoring, with
-                            auto-scaling and load balancing configured through ELB and ASG
-                            Designed an interactive D3.js dashboard to visualise query patterns and index
-                            recommendations, helping developers
-                            identify performance bottlenecks faster
+                            A PostgreSQL performance analyser that parses query ASTs and evaluates EXPLAIN plans to
+                            recommend indexes, reducing query execution time from 2.4s to 420ms on table scans over 500K
+                            rows. Analysed 200+ production queries from a five-million-row database across 12 tables,
+                            identifying 17 missing indexes that reduced average query time by 65%.
+                            <br><br>
+                            Deployed on AWS using ECS with RDS PostgreSQL, implementing CloudWatch monitoring with
+                            auto-scaling groups. Built interactive D3.js dashboard visualising query execution plans as
+                            flame graphs and index coverage heatmaps. Implemented cost-based recommendation engine that
+                            prioritises indexes by expected performance gain.
                         </p>
                     </div>
                 </div>
@@ -218,11 +217,13 @@
                         </header>
                         <p>
                             A React Native food tracking app to help reduce household food waste, with 30+ beta users
-                            testing over 3 months. Deployed Node.js REST API on Vercel with PostgreSQL RDS backend,
-                            implementing automated daily backups and CloudWatch monitoring. Integrated Spoonacular
-                            Recipe API with Redis caching to suggest recipes based on expiring ingredients, achieving
-                            consistent 300ms response times under load. Established push notifications using AWS SNS to
-                            remind users about approaching expiration dates.
+                            testing over 3 months. Deployed Node.js REST API on Vercel with RDS PostgreSQL backend with
+                            automated daily backups. Integrated Recipe APIs with Redis caching, reducing average
+                            response time from 1.8s to 120ms.
+                            <br><br>
+                            Established push notifications using AWS SNS triggering on approaching expiration dates,
+                            achieving 68% user engagement rate. Conducted UI/UX accessibility review using Android
+                            Accessibility Scanner and verified consistent 60 FPS rendering on mid-tier devices.
                         </p>
                     </div>
                 </div>
@@ -241,11 +242,14 @@
                             </div>
                         </header>
                         <p>
-                            MSc dissertation research project. Developing a robust and well-documented Python software
-                            package for medical image segmentation, applied to the prostate anatomy in T2-weighted MR
-                            images from prostate cancer patients. Utilising deep learning techniques with PyTorch,
-                            aiming to improve segmentation accuracy and efficiency. Benchmarked against nnU-Net and
-                            MONAI.
+                            An MSc dissertation developing a PyTorch-based medical image segmentation system for
+                            prostate anatomy in T2-weighted MRI scans. Implementing U-Net architecture with attention
+                            mechanisms and residual connections.
+                            <br><br>
+                            Engineering data augmentation pipeline with geometric
+                            and intensity transformations to handle class imbalance. Benchmarking against nnU-Net and
+                            MONAI frameworks across multiple evaluation metrics including Dice coefficient, IoU, and
+                            Hausdorff distance
                         </p>
                     </div>
                 </div>
@@ -267,10 +271,16 @@
                             </div>
                         </header>
                         <p>
-                            An end-to-end encrypted file storage system in Java, tested with 50 concurrent sessions.
-                            Implemented zero-knowledge and zero-trust architecture ensuring complete data privacy with
-                            multi-layer encryption. Designed granular access control system, managing permissions for
-                            large file sets without revealing any users, filenames, or the file contents.
+                            An end-to-end encrypted file storage system in Java with zero-knowledge architecture,
+                            ensuring complete data privacy through AES-256 encryption with RSA-2048 key exchange and
+                            HMAC-SHA256 integrity verification. Designed granular capability-based access control system
+                            managing permissions without revealing any plaintext usernames, filenames, or file contents
+                            to the server.
+                            <br><br>
+                            Load tested with JMeter at 50 concurrent sessions performing 200 operations/second,
+                            achieving average latency of 180ms for file retrieval and 450ms for encrypted uploads up to
+                            10MB. Validated security against OWASP Top 10 with penetration testing for man-in-the-middle
+                            and replay attacks.
                         </p>
                     </div>
                 </div>
@@ -288,12 +298,12 @@
                             </div>
                         </header>
                         <p>
-                            BSc dissertation research project. A procedural content generation tool written in Java for
-                            a PSPACE decision problem –
-                            Sokoban. Combines stochastic generation, entity-mapping optimisation constraints, and a
-                            Two-Archive
-                            evolutionary algorithm to balance challenge and diversity. Generates 1000+ unique, playable
-                            puzzles validated by solvers, capable of exceeding hand-crafted puzzle difficulty.
+                            A Java procedural content generation tool for PSPACE-Complete Sokoban puzzles, building solvable levels by working
+                            backwards from goals to starting states. Combines stochastic generation, entity-mapping
+                            constraints, and a Two-Archive evolutionary algorithm to build optimised puzzle layouts of customisable difficulty.
+                            <br><br>
+                            Generated 10,000+ unique puzzles validated by an array of solvers. Tested against JSoko
+                            optimised solver, achieving 70±19 optimal moves versus 94±55 for hand-crafted baseline puzzles.
                         </p>
                     </div>
                 </div>
