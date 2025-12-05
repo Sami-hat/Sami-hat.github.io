@@ -68,6 +68,7 @@
 
 body {
   font-family: var(--base-font-family);
+  zoom: 90%; /* Zooms out to 75% */
 }
 
 
