@@ -146,7 +146,6 @@ p {
 }
 
 
-
 .project-header {
   display: flex;
   flex-direction: column;
@@ -158,21 +157,39 @@ p {
 
 .project-header .project-title {
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .tech-icons {
   display: flex;
+  align-items: center;
   gap: 10px;
-  font-size: 24px; /* For Font Awesome icons; images will ignore this */
+  font-size: 24px;
+  width: 100%;
 }
 
 .tech-icons img {
-  display: flex;
-  gap: 10px;
   width: 24px;
   height: 24px;
   max-width: 24px;
   max-height: 24px;
+}
+
+.github-link {
+  margin-left: auto;
+  color: var(--dark-color);
+  font-size: 24px;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.github-link:hover {
+  color: var(--primary-color);
+}
+
+.github-link i {
+  vertical-align: middle;
 }
 
 /*---------------------------------------
@@ -507,7 +524,6 @@ body {
 .social-links a:hover {
   color: var(--dark-color);
 }
-
 
 /*---------------------------------------
     RESPONSIVE STYLES              
