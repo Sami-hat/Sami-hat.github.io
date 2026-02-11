@@ -1,790 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Sami's Resume - Profile HTML Page</title>
 
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+<head>
+  <title>Sami's Resume - Profile HTML Page</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="..\css\styles.css" />
-  </head>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-  <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-    <!-- MENU BAR -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="#"> Sami's Portfolio </a>
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="..\css\styles.css" />
+</head>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+  <!-- MENU BAR -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#"> Sami's Portfolio </a>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a href="#about" class="nav-link smoothScroll">Bio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a href="#about" class="nav-link smoothScroll">Bio</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#experience" class="nav-link smoothScroll">Experience</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#projects" class="nav-link smoothScroll">Projects</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contact" class="nav-link smoothScroll">Contact</a>
+          </li>
+        </ul>
+
+        <div class="d-flex">
+          <div class="mt-lg-0 mt-3 mb-4 mb-lg-0 ml-3">
+            <a href="assets/CV.pdf" class="custom-btn btn" download>Download CV</a>
+          </div>
+          <div class="mt-lg-0 mt-3 mb-4 mb-lg-0 ml-3">
+            <a href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing"
+              class="custom-btn btn" download>Report Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero d-flex flex-column justify-content-center align-items-center mt-5" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto col-lg-4 col-md-4 col-10">
+          <img src="images/Full Body.jpg" class="about-image img-fluid" />
+        </div>
+
+        <div class="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
+          <div class="hero-text">
+            <h1 class="hero-title">Sami Hatoum</h1>
+          </div>
+
+          <div class="col-lg-11 col-md-11 col-12 mt-3">
+            <div class="about-text-wrapper">
+              <h3 class="mb-4">About Me</h3>
+
+              <p>
+                I'm Sami Hatoum, a Computer Science graduate from St Andrews,
+                now doing an MSc in AI at UCL, where I build ML/DL systems and deploy them.
+                Across two internships at PwC, I shipped an ML pipeline for automated customer feedback
+                classification and built an internal tool that replaced a manual onboarding workflow.
+                I work across the stack, from training neural networks to designing databases
+                to writing CI/CD pipelines. Reports and code on GitHub.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience section-padding" id="experience">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <h2>Experience</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 col-md-8 col-12">
+          <div class="experience-item">
+            <span class="company-badge">PwC</span>
+            <h3>Software Consulting Intern (AI)</h3>
+            <p>
+              Built a sentiment analysis model using PyTorch BERT to automate
+              customer feedback classification for a retail client. Achieved
+              91% F1 score on an imbalanced dataset, processing 10,000 reviews
+              daily. Engineered containerised deployment with Flask API on AWS
+              EC2 with auto-scaling across multiple instances.
+            </p>
+            <p>
+              Set up CloudWatch monitoring dashboards and wrote a retraining
+              script triggered when weekly evaluation accuracy dropped below
+              85%, with senior consultant approval before redeployment.
+              Optimised the preprocessing pipeline with pandas vectorisation,
+              reducing daily batch processing time by 60%.
+            </p>
+          </div>
+          <div class="experience-item">
+            <span class="company-badge">PwC</span>
+            <h3>Software Engineering Intern</h3>
+            <p>
+              Developed an internal client onboarding dashboard in React and
+              Node.js that replaced a manual spreadsheet workflow for a
+              financial services team, reducing onboarding processing time
+              from 3 days to 4 hours. Designed a PostgreSQL data model with
+              role-based access control, integrating with PwC's internal SSO
+              authentication system.
+            </p>
+            <p>
+              Wrote CI/CD pipelines in GitHub Actions with automated testing
+              and staged deployments to AWS, achieving 90%+ code coverage
+              across 45 unit and integration tests.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-12 text-center">
+          <img src="..\images\pwc.png" class="img-fluid" alt="Experience Image" style="max-height: 300px" />
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section-padding" id="projects">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mb-4">
+        <h2>Projects</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- First Row -->
+      <div class="row mb-4">
+        <!-- Database Query Optimisation Tool -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Backend</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Database Query Optimiser</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-python" title="Python"></i>
+                <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL" />
+                <img src="..\images\aws.png" alt="AWS" title="AWS" />
+                <i class="fab fa-docker" title="Docker"></i>
+                <img src="..\images\d3.png" alt="D3.js" title="D3.js" />
+                </a>
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">ECS</span>
+              <span class="metric">CloudWatch</span>
+              <span class="metric">AST parsing</span>
+            </div>
+
+            <p>
+              PostgreSQL performance analyser. Parses query ASTs and evaluates
+              EXPLAIN plans to recommend indexes.
+            </p>
+
+            <p>
+              Analysed 200+ production queries from a five-million-row
+              database. Identified 21 missing indexes across 12 tables.
+            </p>
+
+            <div class="project-links">
+              <a href="https://github.com/Sami-hat/query-optimiser" target="_blank" class="report-link">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Selective Prediction MSc Dissertation -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Deep Learning</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Selective Prediction for Segmentation</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-python" title="Python"></i>
+                <img src="..\images\ml.png" alt="Deep Learning - PyTorch" title="Deep Learning - PyTorch" />
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">Interpretable AI</span>
+              <!-- <span class="metric">MC Dropout</span> -->
+              <span class="metric">Inference Uncertainty</span>
+            </div>
+
+            <p>
+              Model-agnostic selective prediction framework that determines when an AI segmentation model is clinically
+              safe or should defer to a radiologist.
+            </p>
+
+            <p>
+              Monte Carlo Dropout (T=20) estimates voxel-level uncertainty, aggregated via entropy and mutual
+              information into per-scan deferral decisions. Evaluation pipeline produces accuracy-coverage curves,
+              calibration plots, and uncertainty heatmaps.
+            </p>
+
+            <div class="project-links">
+              <a href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing"
+                target="_blank" class="report-link">View Report</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clinically Weighted Pelvic Organ Segmentation -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Deep Learning</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Clinically Weighted Pelvic Segmentation</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-python" title="Python"></i>
+                <img src="..\images\ml.png" alt="Deep Learning - PyTorch" title="Deep Learning - PyTorch" />
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">3D Res-UNet</span>
+              <span class="metric">Hierarchical loss</span>
+              <span class="metric">IMRT</span>
+            </div>
+
+            <p>
+              Group project: designed a hierarchical loss function encoding
+              radiosensitivity and anatomical proximity for prostate IMRT
+              planning. Trained on 589 multi-institutional MRI volumes.
+            </p>
+
+            <p>
+              Achieved 0.886 mean foreground DSC. Improved NVB from 0.630 to 0.659 over unweighted
+              baseline. Ablation studies across 3 loss and 3 weighting schemes.
+            </p>
+
+            <div class="project-links">
+              <a href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing"
+                target="_blank" class="report-link">View Report</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="row mb-4">
+        <!-- Cryptographically Secure File Server -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Backend</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Cryptographically Secure File Server</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-java" title="Java"></i>
+                <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL" />
+                <img src="..\images\aws.png" alt="AWS" title="AWS" />
+                </a>
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">AES-256</span>
+              <span class="metric">RSA-2048</span>
+              <span class="metric">HMAC-SHA256</span>
+              <span class="metric">JMeter</span>
+            </div>
+
+            <p>
+              End-to-end encrypted file storage system in Java. Zero-knowledge
+              architecture with AES-256 encryption, RSA-2048 key exchange, and
+              HMAC-SHA256 integrity verification.
+            </p>
+
+            <p>
+              Granular capability-based access control. Load tested at 50
+              concurrent sessions with 200 operations/second. Validated
+              against OWASP Top 10.
+            </p>
+
+            <div class="project-links">
+              <a href="https://github.com/Sami-hat/secure-file-server" target="_blank" class="report-link">View
+                Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sokoban Procedural Puzzle Generator -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Algorithm Design</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Sokoban Procedural Puzzle Generator</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-java" title="Java"></i>
+                <img src="..\images\tableau.png" alt="Tableau" title="Tableau" />
+                </a>
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">Two-Archive EA</span>
+              <span class="metric">JSoko solver</span>
+              <span class="metric">PSPACE-Complete</span>
+            </div>
+
+            <p>
+              BSc dissertation: Java procedural content generation tool for
+              PSPACE-Complete Sokoban puzzles. Works backwards from goals to
+              starting states.
+            </p>
+
+            <p>
+              Combines stochastic generation and Two-Archive evolutionary
+              algorithm. Tested against JSoko optimised solver. Outperformed
+              hand-crafted baseline puzzles.
+            </p>
+
+            <div class="project-links">
+              <a href="https://github.com/Sami-hat/sokoban-pcg" target="_blank" class="report-link">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grocery Management App -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Full Stack</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Grocery Management App</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-html5" title="HTML5"></i>
+                <i class="fab fa-css3-alt" title="CSS3"></i>
+                <i class="fab fa-js-square" title="JavaScript"></i>
+                <img src="..\images\react.png" alt="React" title="React" />
+                <img src="..\images\postgreSQL.png" alt="PostgreSQL" title="PostgreSQL" />
+                <img src="..\images\aws.png" alt="AWS" title="AWS" />
+                <img src="..\images\ml.png" alt="Machine Learning" title="Machine Learning" />
+                </a>
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">Redis</span>
+              <span class="metric">Node.js</span>
+              <span class="metric">Vercel</span>
+              <span class="metric">SNS</span>
+            </div>
+
+            <p>
+              React Native food tracking app to reduce household food waste.
+              Deployed Node.js REST API on Vercel with RDS PostgreSQL backend.
+            </p>
+
+            <p>
+              Integrated Recipe APIs with Redis caching. Push notifications
+              via AWS SNS for expiration alerts. Verified 60 FPS rendering on
+              mid-tier devices.
+            </p>
+
+            <div class="project-links">
+              <a href="https://github.com/Sami-hat/grocery-manager" target="_blank" class="report-link">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Row -->
+      <div class="row">
+        <!-- Automated Algorithm Selection Tool -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Machine Learning</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Automated Algorithm Selection</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-python" title="Python"></i>
+                <i class="fas fa-brain" title="Machine Learning"></i>
+                </a>
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">Scikit-learn</span>
+              <span class="metric">SBS/VBS baseline</span>
+              <span class="metric">HP tuning</span>
+            </div>
+
+            <p>
+              Solver selection tool enhanced using Scikit-learn to predict
+              optimal solver performance per instance.
+            </p>
+
+            <p>
+              Benchmarked models against baselines using classification and
+              regression. Feature normalisation and hyperparameter tuning to
+              improve accuracy.
+            </p>
+
+            <div class="project-links">
+              <a href="https://github.com/Sami-hat/automated-alogirthm-selection" target="_blank"
+                class="report-link">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multi-Agent Path-Finding CSP -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Algorithm Design</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Multi-Agent Multi-Objective PF CSP</h3>
+              </div>
+              <div class="tech-icons">
+                <img src="..\images\programming.png" alt="Essence Prime" title="Essence Prime" />
+                </a>
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">CSP</span>
+              <span class="metric">Minion solver</span>
+              <span class="metric">SAT</span>
+            </div>
+
+            <p>
+              Constraint satisfaction solution for multi-agent pathfinding in
+              automated warehouses. Declarative programming in Essence Prime.
+            </p>
+
+            <p>
+              Designed decision variables and constraints for collision-free
+              robot paths. Optimises total movement costs with symmetry
+              breaking.
+            </p>
+
+            <div class="project-links">
+              <a href="https://github.com/Sami-hat/multi-agent-pathfinding" target="_blank" class="report-link">View
+                Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message-Oriented Middleware System -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="project-card">
+            <span class="project-category">Backend</span>
+            <header class="project-header">
+              <div class="project-title">
+                <h3>Message-Oriented Middleware System</h3>
+              </div>
+              <div class="tech-icons">
+                <i class="fab fa-java" title="Java"></i>
+                </a>
+              </div>
+            </header>
+
+            <div class="project-metrics">
+              <span class="metric">Java RMI</span>
+              <span class="metric">Pub-Sub</span>
+              <span class="metric">FIFO ordering</span>
+            </div>
+
+            <p>
+              Competing-consumer publish-subscribe messaging system using Java
+              RMI. Asynchronous event distribution across network channels.
+            </p>
+
+            <p>
+              Partition-based queue management with dynamic load balancing.
+              Backup queues for crash recovery and at-least-once delivery
+              guarantee.
+            </p>
+
+            <div class="project-links">
+              <a href="https://github.com/Sami-hat/message-middleware" target="_blank" class="report-link">View
+                Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section-padding pt-0" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-12">
+          <form action="#" method="get" class="contact-form webform" role="form">
+            <div class="form-group d-flex flex-column-reverse">
+              <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="Your Name" />
+
+              <label for="cf-name" class="webform-label">Full Name</label>
+            </div>
+
+            <div class="form-group d-flex flex-column-reverse">
+              <input type="email" class="form-control" name="cf-email" id="cf-email" placeholder="Your Email" />
+
+              <label for="cf-email" class="webform-label">Your Email</label>
+            </div>
+
+            <div class="form-group d-flex flex-column-reverse">
+              <textarea class="form-control" rows="5" name="cf-message" id="cf-message"
+                placeholder="Your Message"></textarea>
+
+              <label for="cf-message" class="webform-label">Message</label>
+            </div>
+
+            <button type="submit" class="form-control" id="submit-button" name="submit">
+              Send
+            </button>
+          </form>
+        </div>
+
+        <div class="mx-auto col-lg-4 col-md-6 col-12">
+          <h3 class="my-4 pt-4 pt-lg-0">Get in touch</h3>
+
+          <p class="mb-1">(+44) 774-115-7779</p>
+          <p class="mb-1">(+971) 58-532-5779</p>
+          <p class="mb-1"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+              data-cfemail="64170c05100b1109555455240309050d084a070b09">[email&#160;protected]</a></p>
+
+          <ul class="social-links mt-2">
+            <li>
+              <a href="https://www.linkedin.com/in/sami-hatoum-dev/" rel="noopener" class="fab fa-linkedin"></a>
             </li>
-
-            <li class="nav-item">
-              <a href="#experience" class="nav-link smoothScroll">Experience</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#projects" class="nav-link smoothScroll">Projects</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#contact" class="nav-link smoothScroll">Contact</a>
+            <li>
+              <a href="https://github.com/Sami-hat" rel="noopener" class="fab fa-github"></a>
             </li>
           </ul>
-
-          <div class="d-flex">
-            <div class="mt-lg-0 mt-3 mb-4 mb-lg-0 ml-3">
-              <a href="assets/CV.pdf" class="custom-btn btn" download
-                >Download CV</a
-              >
-            </div>
-            <div class="mt-lg-0 mt-3 mb-4 mb-lg-0 ml-3">
-              <a
-                href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing"
-                class="custom-btn btn"
-                download
-                >Report Portfolio</a
-              >
-            </div>
-          </div>
         </div>
       </div>
-    </nav>
-
-    <!-- HERO -->
-    <section
-      class="hero d-flex flex-column justify-content-center align-items-center mt-5"
-      id="about"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="mx-auto col-lg-4 col-md-4 col-10">
-            <img src="images/Full Body.jpg" class="about-image img-fluid" />
-          </div>
-
-          <div
-            class="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12"
-          >
-            <div class="hero-text">
-              <h1 class="hero-title">Sami Hatoum</h1>
-            </div>
-
-            <div class="col-lg-11 col-md-11 col-12 mt-3">
-              <div class="about-text-wrapper">
-                <h3 class="mb-4">About Me</h3>
-
-                <p>
-                  I'm Sami Hatoum, a Computer Science graduate from St Andrews
-                  currently pursuing my MSc in AI and Medical Imaging at UCL. I
-                  build software that blends machine learning with solid
-                  engineering. I've deployed sentiment analysis systems on AWS and
-                  built mobile apps people use daily. I've worked at PwC on AI
-                  consulting projects and love tackling problems that span the
-                  full stack, whether that's optimising cloud infrastructure,
-                  training neural networks, or designing clean user interfaces.
-                  Beyond coding, I'm a meticulous tester and report writer. You
-                  can find examples of my technical documentation and analysis in
-                  my report portfolio and GitHub.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="experience section-padding" id="experience">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <h2>Experience</h2>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-12">
-            <div class="experience-item">
-              <span class="company-badge">PwC</span>
-              <h3>Software Consulting Intern (AI)</h3>
-              <p>
-                Built a sentiment analysis prototype using a PyTorch-based BERT
-                model, achieving a 91% F1 score on an imbalanced customer review
-                dataset (3:1 negative to positive). Containerised the model with
-                Flask API wrapper and deployed to AWS EC2 with auto-scaling,
-                load tested to handle 150 req/s with average 400ms response
-                time.
-              </p>
-              <p>
-                Implemented monitoring via CloudWatch and established model
-                retraining pipeline triggered by accuracy degradation below 85%
-                threshold. Optimised preprocessing pipeline with pandas
-                vectorisation, reducing daily batch processing time by 60%.
-              </p>
-            </div>
-            
-            <div class="experience-item">
-              <span class="company-badge">PwC</span>
-              <h3>Client-Side Consulting Intern</h3>
-              <p>
-                Collaborated with a cross-functional Agile team to identify 120
-                process-level risks, uncovering £20K in annual savings.
-                Conducted ROI modelling with energy-consumption simulations to
-                assess a proposed air cargo facility's feasibility.
-              </p>
-              <p>
-                Architected a facility concept with solar power and automation,
-                modelling an estimated 18% OpEx reduction based on historical
-                cost benchmarks. Orchestrated facility rollout to maintain 95%
-                on-time delivery based on simulation scenarios and existing SLA
-                benchmarks.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-4 col-12 mt-4">
-            <img
-              src="..\images\pwc.png"
-              class="img-fluid"
-              alt="Experience Image"
-              style="max-height: 300px"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="projects section-padding" id="projects">
-      <div class="row justify-content-center">
-        <div class="col-12 text-center mb-4">
-          <h2>Projects</h2>
-        </div>
-      </div>
-
-      <div class="container">
-        <!-- First Row -->
-        <div class="row mb-4">
-          <!-- Database Query Optimisation Tool -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Backend</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Database Query Optimiser</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-python" title="Python"></i>
-                  <img
-                    src="..\images\postgreSQL.png"
-                    alt="PostgreSQL"
-                    title="PostgreSQL"
-                  />
-                  <img src="..\images\aws.png" alt="AWS" title="AWS" />
-                  <i class="fab fa-docker" title="Docker"></i>
-                  <img src="..\images\d3.png" alt="D3.js" title="D3.js" />
-                  <!-- <a
-                    href="https://github.com/Sami-hat/query-optimiser"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">ECS</span>
-                <span class="metric">CloudWatch</span>
-                <span class="metric">AST parsing</span>
-              </div>
-
-              <p>
-                PostgreSQL performance analyser. Parses query ASTs and evaluates
-                EXPLAIN plans to recommend indexes.
-              </p>
-
-              <p>
-                Analysed 200+ production queries from a five-million-row
-                database. Identified 21 missing indexes across 12 tables.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/query-optimiser"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Food Waste Management App -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Full Stack</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Grocery Management App</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-html5" title="HTML5"></i>
-                  <i class="fab fa-css3-alt" title="CSS3"></i>
-                  <i class="fab fa-js-square" title="JavaScript"></i>
-                  <img src="..\images\react.png" alt="React" title="React" />
-                  <img
-                    src="..\images\postgreSQL.png"
-                    alt="PostgreSQL"
-                    title="PostgreSQL"
-                  />
-                  <img src="..\images\aws.png" alt="AWS" title="AWS" />
-                  <img
-                    src="..\images\ml.png"
-                    alt="Machine Learning"
-                    title="Machine Learning"
-                  />
-                  <!-- <a
-                    href="https://github.com/Sami-hat/food-waste-management-app"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">Redis</span>
-                <span class="metric">Node.js</span>
-                <span class="metric">Vercel</span>
-                <span class="metric">SNS</span>
-              </div>
-
-              <p>
-                React Native food tracking app to reduce household food waste.
-                Deployed Node.js REST API on Vercel with RDS PostgreSQL backend.
-              </p>
-
-              <p>
-                Integrated Recipe APIs with Redis caching. Push notifications
-                via AWS SNS for expiration alerts. Verified 60 FPS rendering on
-                mid-tier devices.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/grocery-manager"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Deep Learning Medical Image Segmentation -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Deep Learning</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>DL Medical Image Segmentation</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-python" title="Python"></i>
-                  <img
-                    src="..\images\ml.png"
-                    alt="Deep Learning - PyTorch"
-                    title="Deep Learning - PyTorch"
-                  />
-                  <!-- <a
-                    href="https://github.com/Sami-hat"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a> -->
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">U-Net</span>
-                <span class="metric">Attention mechanisms</span>
-                <span class="metric">nnU-Net</span>
-                <span class="metric">MONAI</span>
-              </div>
-
-              <p>
-                MSc dissertation: PyTorch-based medical image segmentation
-                system for prostate anatomy in T2-weighted MRI scans.
-                Implementing U-Net architecture with attention mechanisms.
-              </p>
-
-              <p>
-                Engineering data augmentation pipeline with geometric and
-                intensity transformations. Benchmarking against nnU-Net and
-                MONAI frameworks.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing"
-                  target="_blank"
-                  class="report-link"
-                  >View Report</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Second Row -->
-        <div class="row mb-4">
-          <!-- Cryptographically Secure File Server -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Backend</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Cryptographically Secure File Server</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-java" title="Java"></i>
-                  <img
-                    src="..\images\postgreSQL.png"
-                    alt="PostgreSQL"
-                    title="PostgreSQL"
-                  />
-                  <img src="..\images\aws.png" alt="AWS" title="AWS" />
-                  <!-- <a
-                    href="https://github.com/Sami-hat/secure-file-server"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">AES-256</span>
-                <span class="metric">RSA-2048</span>
-                <span class="metric">HMAC-SHA256</span>
-                <span class="metric">JMeter</span>
-              </div>
-
-              <p>
-                End-to-end encrypted file storage system in Java. Zero-knowledge
-                architecture with AES-256 encryption, RSA-2048 key exchange, and
-                HMAC-SHA256 integrity verification.
-              </p>
-
-              <p>
-                Granular capability-based access control. Load tested at 50
-                concurrent sessions with 200 operations/second. Validated
-                against OWASP Top 10.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/secure-file-server"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Sokoban Procedural Puzzle Generator -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Algorithm Design</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Sokoban Procedural Puzzle Generator</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-java" title="Java"></i>
-                  <img
-                    src="..\images\tableau.png"
-                    alt="Tableau"
-                    title="Tableau"
-                  />
-                  <!-- <a
-                    href="https://github.com/Sami-hat/sokoban-pcg"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">Two-Archive EA</span>
-                <span class="metric">JSoko solver</span>
-                <span class="metric">PSPACE-Complete</span>
-              </div>
-
-              <p>
-                BSc dissertation: Java procedural content generation tool for
-                PSPACE-Complete Sokoban puzzles. Works backwards from goals to
-                starting states.
-              </p>
-
-              <p>
-                Combines stochastic generation and Two-Archive evolutionary
-                algorithm. Tested against JSoko optimised solver. Outperformed
-                hand-crafted baseline puzzles.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/sokoban-pcg"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Multi-Label Classification -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Machine Learning</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Multi-Label Image Classification</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-python" title="Python"></i>
-                  <img src="..\images\matlab.png" alt="MATLAB" title="MATLAB" />
-                  <!-- <a
-                    href="https://github.com/Sami-hat/image-audio-signal-analysis"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">Watershed</span>
-                <span class="metric">Edge detection</span>
-                <span class="metric">Contrast stretching</span>
-              </div>
-
-              <p>
-                Segmentation and multi-label classification of clustered
-                objects. Uses imperative programming with convolutional edge
-                detection and watershed segmentation.
-              </p>
-
-              <p>
-                Fine-tuned pre-processing stages including contrast stretching,
-                smoothing, and feature extraction. No CNNs or unsupervised ML.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/image-audio-signal-analysis"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Third Row -->
-        <div class="row">
-          <!-- Automated Algorithm Selection Tool -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Machine Learning</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Automated Algorithm Selection</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-python" title="Python"></i>
-                  <i class="fas fa-brain" title="Machine Learning"></i>
-                  <!-- <a
-                    href="https://github.com/Sami-hat/automated-alogirthm-selection"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">Scikit-learn</span>
-                <span class="metric">SBS/VBS baseline</span>
-                <span class="metric">HP tuning</span>
-              </div>
-
-              <p>
-                Solver selection tool enhanced using Scikit-learn to predict
-                optimal solver performance per instance.
-              </p>
-
-              <p>
-                Benchmarked models against baselines using classification and
-                regression. Feature normalisation and hyperparameter tuning to
-                improve accuracy.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/automated-alogirthm-selection"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Multi-Agent Path-Finding CSP -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Algorithm Design</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Multi-Agent Multi-Objective PF CSP</h3>
-                </div>
-                <div class="tech-icons">
-                  <img
-                    src="..\images\programming.png"
-                    alt="Essence Prime"
-                    title="Essence Prime"
-                  />
-                  <!-- <a
-                    href="https://github.com/Sami-hat/multi-agent-pathfinding"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">CSP</span>
-                <span class="metric">Minion solver</span>
-                <span class="metric">SAT</span>
-              </div>
-
-              <p>
-                Constraint satisfaction solution for multi-agent pathfinding in
-                automated warehouses. Declarative programming in Essence Prime.
-              </p>
-
-              <p>
-                Designed decision variables and constraints for collision-free
-                robot paths. Optimises total movement costs with symmetry
-                breaking.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/multi-agent-pathfinding"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Message-Oriented Middleware System -->
-          <div class="col-lg-4 col-md-6 col-12 mb-4">
-            <div class="project-card">
-              <span class="project-category">Backend</span>
-              <header class="project-header">
-                <div class="project-title">
-                  <h3>Message-Oriented Middleware System</h3>
-                </div>
-                <div class="tech-icons">
-                  <i class="fab fa-java" title="Java"></i>
-                  <!-- <a
-                    href="https://github.com/Sami-hat/message-middleware"
-                    target="_blank"
-                    rel="noopener"
-                    class="github-link"
-                    title="View on GitHub"
-                  >
-                    <i class="fab fa-github"></i> -->
-                  </a>
-                </div>
-              </header>
-
-              <div class="project-metrics">
-                <span class="metric">Java RMI</span>
-                <span class="metric">Pub-Sub</span>
-                <span class="metric">FIFO ordering</span>
-              </div>
-
-              <p>
-                Competing-consumer publish-subscribe messaging system using Java
-                RMI. Asynchronous event distribution across network channels.
-              </p>
-
-              <p>
-                Partition-based queue management with dynamic load balancing.
-                Backup queues for crash recovery and at-least-once delivery
-                guarantee.
-              </p>
-
-              <div class="project-links">
-                <a
-                  href="https://github.com/Sami-hat/message-middleware"
-                  target="_blank"
-                  class="report-link"
-                  >View Project</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact section-padding pt-0" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-12">
-            <form
-              action="#"
-              method="get"
-              class="contact-form webform"
-              role="form"
-            >
-              <div class="form-group d-flex flex-column-reverse">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="cf-name"
-                  id="cf-name"
-                  placeholder="Your Name"
-                />
-
-                <label for="cf-name" class="webform-label">Full Name</label>
-              </div>
-
-              <div class="form-group d-flex flex-column-reverse">
-                <input
-                  type="email"
-                  class="form-control"
-                  name="cf-email"
-                  id="cf-email"
-                  placeholder="Your Email"
-                />
-
-                <label for="cf-email" class="webform-label">Your Email</label>
-              </div>
-
-              <div class="form-group d-flex flex-column-reverse">
-                <textarea
-                  class="form-control"
-                  rows="5"
-                  name="cf-message"
-                  id="cf-message"
-                  placeholder="Your Message"
-                ></textarea>
-
-                <label for="cf-message" class="webform-label">Message</label>
-              </div>
-
-              <button
-                type="submit"
-                class="form-control"
-                id="submit-button"
-                name="submit"
-              >
-                Send
-              </button>
-            </form>
-          </div>
-
-          <div class="mx-auto col-lg-4 col-md-6 col-12">
-            <h3 class="my-4 pt-4 pt-lg-0">Get in touch</h3>
-
-            <p class="mb-1">(+44) 774-115-7779</p>
-            <p class="mb-1">(+971) 58-532-5779</p>
-            <p class="mb-1">shatoum101@gmail.com</p>
-
-            <ul class="social-links mt-2">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/sami-hatoum-dev/"
-                  rel="noopener"
-                  class="fab fa-linkedin"
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Sami-hat"
-                  rel="noopener"
-                  class="fab fa-github"
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SCRIPTS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
-</html>
+    </div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script data-cfasyn
