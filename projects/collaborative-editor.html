@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Real-Time Collaborative Code Editor - Sami Hatoum</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg scroll">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Sami Hatoum</a>
+        <a href="../index.html#projects" class="back-link ml-auto">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </nav>
+
+    <section class="project-detail-hero">
+      <div class="container">
+        <span class="project-category">Full Stack</span>
+        <h1>Real-Time Collaborative Code Editor</h1>
+        <div class="tech-icons">
+          <i class="fab fa-react" title="React"></i>
+          <i class="fab fa-node-js" title="Node.js"></i>
+          <i class="fab fa-docker" title="Docker"></i>
+          <img src="../images/aws.png" alt="AWS" title="AWS" />
+          <img
+            src="../images/postgreSQL.png"
+            alt="PostgreSQL"
+            title="PostgreSQL"
+          />
+        </div>
+        <div class="project-metrics mt-3">
+          <span class="metric">WebSockets</span>
+          <span class="metric">Operational Transform</span>
+          <span class="metric">Redis Pub/Sub</span>
+          <span class="metric">50+ Concurrent Editors</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-content">
+      <div class="container">
+        <div class="project-detail-image">
+          <i class="fas fa-code placeholder-icon"></i>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <h2>Overview</h2>
+            <p>
+              A multi-user code editor built with React and Node.js using
+              WebSockets and Operational Transform for conflict-free concurrent
+              editing. CodeMirror provides syntax highlighting for 12
+              programming languages.
+            </p>
+            <p>
+              The Redis pub/sub layer enables horizontal scaling across server
+              instances, achieving sub-100ms synchronisation latency with 50+
+              concurrent editors. JWT authentication provides per-room
+              permission levels (owner/editor/viewer).
+            </p>
+
+            <h2 class="mt-4">Architecture</h2>
+            <p>
+              The frontend is a React application with CodeMirror integrated for
+              rich code editing. The backend runs on Node.js with Express, using
+              WebSocket connections for real-time communication. Operational
+              Transform algorithms ensure that concurrent edits from multiple
+              users converge to the same document state.
+            </p>
+            <p>
+              Redis pub/sub handles cross-instance message passing, allowing the
+              system to scale horizontally. PostgreSQL stores session
+              persistence data, enabling users to rejoin documents with full
+              edit history intact. Automatic reconnection handles network loss
+              gracefully.
+            </p>
+
+            <h2 class="mt-4">Testing & Deployment</h2>
+            <p>
+              85+ tests written with Jest and Playwright cover OT convergence
+              edge cases and WebSocket fault tolerance scenarios. The
+              application is deployed on AWS ECS with Docker containers, with
+              GitHub Actions CI/CD for automated testing and deployment.
+            </p>
+
+            <div class="project-links mt-4">
+              <a
+                href="https://github.com/Sami-hat/rt-code-editor"
+                target="_blank"
+                class="report-link"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

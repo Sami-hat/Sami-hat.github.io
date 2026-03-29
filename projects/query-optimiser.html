@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>PostgreSQL Query Analysis and Optimisation - Sami Hatoum</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg scroll">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Sami Hatoum</a>
+        <a href="../index.html#projects" class="back-link ml-auto">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </nav>
+
+    <section class="project-detail-hero">
+      <div class="container">
+        <span class="project-category">Backend</span>
+        <h1>PostgreSQL Query Analysis and Optimisation</h1>
+        <div class="tech-icons">
+          <i class="fab fa-python" title="Python"></i>
+          <img
+            src="../images/postgreSQL.png"
+            alt="PostgreSQL"
+            title="PostgreSQL"
+          />
+          <img src="../images/aws.png" alt="AWS" title="AWS" />
+          <i class="fab fa-docker" title="Docker"></i>
+          <img src="../images/d3.png" alt="D3.js" title="D3.js" />
+        </div>
+        <div class="project-metrics mt-3">
+          <span class="metric">ECS</span>
+          <span class="metric">CloudWatch</span>
+          <span class="metric">AST parsing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-content">
+      <div class="container">
+        <div class="project-detail-image">
+          <i class="fas fa-database placeholder-icon"></i>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <h2>Overview</h2>
+            <p>
+              A PostgreSQL performance analyser that parses query ASTs and
+              evaluates EXPLAIN plans to recommend indexes. Built to identify
+              bottlenecks and missing optimisations in production database
+              workloads.
+            </p>
+            <p>
+              Analysed 200+ production queries from a five-million-row database,
+              identifying 21 missing indexes across 12 tables, leading to
+              measurable improvements in query execution time.
+            </p>
+
+            <h2 class="mt-4">Technical Highlights</h2>
+            <p>
+              The tool parses SQL queries into abstract syntax trees to
+              understand query structure and access patterns. It then correlates
+              this with PostgreSQL EXPLAIN plan output to identify sequential
+              scans, missing indexes, and suboptimal join strategies.
+            </p>
+            <p>
+              Deployed on AWS ECS with Docker containers, with CloudWatch
+              integration for monitoring query analysis jobs. D3.js powers an
+              interactive visualisation dashboard that presents index
+              recommendations and performance comparisons.
+            </p>
+
+            <div class="project-links mt-4">
+              <a
+                href="https://github.com/Sami-hat/query-optimiser"
+                target="_blank"
+                class="report-link"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

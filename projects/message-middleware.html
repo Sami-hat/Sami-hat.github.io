@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Message-Oriented Middleware System - Sami Hatoum</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg scroll">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Sami Hatoum</a>
+        <a href="../index.html#projects" class="back-link ml-auto">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </nav>
+
+    <section class="project-detail-hero">
+      <div class="container">
+        <span class="project-category">Backend</span>
+        <h1>Message-Oriented Middleware System</h1>
+        <div class="tech-icons">
+          <i class="fab fa-java" title="Java"></i>
+        </div>
+        <div class="project-metrics mt-3">
+          <span class="metric">Java RMI</span>
+          <span class="metric">Pub-Sub</span>
+          <span class="metric">FIFO ordering</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-content">
+      <div class="container">
+        <div class="project-detail-image">
+          <i class="fas fa-envelope placeholder-icon"></i>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <h2>Overview</h2>
+            <p>
+              A competing-consumer publish-subscribe messaging system built
+              using Java RMI. The system provides asynchronous event
+              distribution across network channels, enabling decoupled
+              communication between distributed components.
+            </p>
+
+            <h2 class="mt-4">Architecture</h2>
+            <p>
+              Partition-based queue management with dynamic load balancing
+              distributes messages evenly across consumers. The system maintains
+              FIFO ordering within partitions to ensure message consistency.
+            </p>
+            <p>
+              Backup queues provide crash recovery with an at-least-once
+              delivery guarantee, ensuring no messages are lost even during node
+              failures.
+            </p>
+
+            <div class="project-links mt-4">
+              <a
+                href="https://github.com/Sami-hat/message-middleware"
+                target="_blank"
+                class="report-link"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

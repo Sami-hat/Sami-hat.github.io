@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cryptographically Secure File Server - Sami Hatoum</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg scroll">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Sami Hatoum</a>
+        <a href="../index.html#projects" class="back-link ml-auto">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </nav>
+
+    <section class="project-detail-hero">
+      <div class="container">
+        <span class="project-category">Backend</span>
+        <h1>Cryptographically Secure File Server</h1>
+        <div class="tech-icons">
+          <i class="fab fa-java" title="Java"></i>
+          <img
+            src="../images/postgreSQL.png"
+            alt="PostgreSQL"
+            title="PostgreSQL"
+          />
+          <img src="../images/aws.png" alt="AWS" title="AWS" />
+        </div>
+        <div class="project-metrics mt-3">
+          <span class="metric">AES-256</span>
+          <span class="metric">RSA-2048</span>
+          <span class="metric">HMAC-SHA256</span>
+          <span class="metric">JMeter</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-content">
+      <div class="container">
+        <div class="project-detail-image">
+          <i class="fas fa-lock placeholder-icon"></i>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <h2>Overview</h2>
+            <p>
+              An end-to-end encrypted file storage system built in Java with a
+              zero-knowledge architecture. Files are encrypted client-side with
+              AES-256 before upload, ensuring the server never has access to
+              plaintext data.
+            </p>
+
+            <h2 class="mt-4">Security Architecture</h2>
+            <p>
+              AES-256 provides symmetric encryption for file data, RSA-2048
+              handles key exchange between users, and HMAC-SHA256 ensures
+              integrity verification on every file operation. The system
+              implements granular capability-based access control for
+              fine-grained sharing permissions.
+            </p>
+            <p>
+              Load tested at 50 concurrent sessions handling 200 operations per
+              second using JMeter. The entire system was validated against OWASP
+              Top 10 vulnerabilities.
+            </p>
+
+            <div class="project-links mt-4">
+              <a
+                href="https://github.com/Sami-hat/secure-file-server"
+                target="_blank"
+                class="report-link"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

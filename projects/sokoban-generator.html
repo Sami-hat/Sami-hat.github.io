@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Sokoban Procedural Puzzle Generator - Sami Hatoum</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg scroll">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Sami Hatoum</a>
+        <a href="../index.html#projects" class="back-link ml-auto">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </nav>
+
+    <section class="project-detail-hero">
+      <div class="container">
+        <span class="project-category">Algorithm Design</span>
+        <h1>Sokoban Procedural Puzzle Generator</h1>
+        <div class="tech-icons">
+          <i class="fab fa-java" title="Java"></i>
+          <img src="../images/tableau.png" alt="Tableau" title="Tableau" />
+        </div>
+        <div class="project-metrics mt-3">
+          <span class="metric">Two-Archive EA</span>
+          <span class="metric">JSoko solver</span>
+          <span class="metric">PSPACE-Complete</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-content">
+      <div class="container">
+        <div
+          class="project-detail-image"
+          style="
+            background: linear-gradient(
+              135deg,
+              #2e1a0a 0%,
+              #4e2d1b 50%,
+              #6e462d 100%
+            );
+          "
+        >
+          <i class="fas fa-puzzle-piece placeholder-icon"></i>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <h2>Overview</h2>
+            <p>
+              BSc Dissertation: a Java procedural content generation tool for
+              PSPACE-Complete Sokoban puzzles. The generator works backwards
+              from goal states to starting states, ensuring every generated
+              puzzle is solvable.
+            </p>
+
+            <h2 class="mt-4">Technical Approach</h2>
+            <p>
+              Combines stochastic generation with a Two-Archive evolutionary
+              algorithm. The dual-archive approach maintains separate
+              populations for quality and novelty, producing diverse and
+              challenging puzzles.
+            </p>
+            <p>
+              All generated puzzles are validated against the JSoko optimised
+              solver. Evaluation showed the generated puzzles outperformed
+              hand-crafted baseline puzzles in complexity metrics. Tableau was
+              used for data visualisation and analysis of puzzle
+              characteristics.
+            </p>
+
+            <div class="project-links mt-4">
+              <a
+                href="https://github.com/Sami-hat/sokoban-pcg"
+                target="_blank"
+                class="report-link"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>

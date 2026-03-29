@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Grocery Management App - Sami Hatoum</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg scroll">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Sami Hatoum</a>
+        <a href="../index.html#projects" class="back-link ml-auto">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </nav>
+
+    <section class="project-detail-hero">
+      <div class="container">
+        <span class="project-category">Full Stack</span>
+        <h1>Grocery Management App</h1>
+        <div class="tech-icons">
+          <i class="fab fa-html5" title="HTML5"></i>
+          <i class="fab fa-css3-alt" title="CSS3"></i>
+          <i class="fab fa-js-square" title="JavaScript"></i>
+          <img src="../images/react.png" alt="React" title="React" />
+          <img
+            src="../images/postgreSQL.png"
+            alt="PostgreSQL"
+            title="PostgreSQL"
+          />
+          <img src="../images/aws.png" alt="AWS" title="AWS" />
+          <img
+            src="../images/ml.png"
+            alt="Machine Learning"
+            title="Machine Learning"
+          />
+        </div>
+        <div class="project-metrics mt-3">
+          <span class="metric">Redis</span>
+          <span class="metric">Node.js</span>
+          <span class="metric">Vercel</span>
+          <span class="metric">SNS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-detail-content">
+      <div class="container">
+        <div
+          class="project-detail-image"
+          style="
+            background: linear-gradient(
+              135deg,
+              #0d1117 0%,
+              #161b22 50%,
+              #21262d 100%
+            );
+          "
+        >
+          <i class="fas fa-shopping-cart placeholder-icon"></i>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <h2>Overview</h2>
+            <p>
+              A React Native food tracking application designed to reduce
+              household food waste. Users can track groceries, receive
+              expiration alerts, and discover recipes based on ingredients they
+              have on hand.
+            </p>
+
+            <h2 class="mt-4">Technical Stack</h2>
+            <p>
+              The backend is a Node.js REST API deployed on Vercel with an RDS
+              PostgreSQL database. Recipe API integration uses Redis caching to
+              minimise external API calls and improve response times.
+            </p>
+            <p>
+              Push notifications via AWS SNS alert users when items are
+              approaching expiration. The app was performance tested to verify
+              60 FPS rendering on mid-tier mobile devices.
+            </p>
+
+            <div class="project-links mt-4">
+              <a
+                href="https://github.com/Sami-hat/grocery-manager"
+                target="_blank"
+                class="report-link"
+                >View on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
