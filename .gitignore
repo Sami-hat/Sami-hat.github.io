@@ -1,0 +1,9 @@
+archive/
+.vscode/
+.claude/
+.idea/
+*.log
+*.tmp
+localfonts/
+webfonts/
+
