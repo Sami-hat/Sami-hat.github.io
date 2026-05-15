@@ -576,62 +576,151 @@
     ctx.fillText(`acc=${(0.86 + 0.04 * Math.sin(t)).toFixed(3)}`, w - 14, mt - 2);
   };
 
-  // 9. Multi-agent pathfind
+  // 9. Multi-agent pathfind — CSP-solved push routes
   VIZ.pathfind = (ctx, w, h, t, state) => {
     fillBg(ctx, w, h);
     const cols = 14, rows = 8;
     const cw = w / cols, ch = h / rows;
-    if (!state.obstacles) {
-      const obs = new Set();
-      const rng = mulberry32(33);
-      for (let i = 0; i < 14; i++) {
-        const x = 2 + Math.floor(rng() * (cols - 4));
-        const y = 1 + Math.floor(rng() * (rows - 2));
-        obs.add(`${x},${y}`);
-      }
-      state.obstacles = obs;
-      state.paths = [
-        { color: C.signal, points: [[0,1],[1,1],[2,1],[3,1],[3,2],[4,2],[5,2],[6,2],[7,3],[8,3],[9,3],[10,3],[11,3],[12,3],[13,3]] },
-        { color: C.cyan,   points: [[0,6],[1,6],[2,5],[3,5],[4,5],[5,5],[6,6],[7,6],[8,6],[9,6],[10,6],[11,6],[12,6],[13,6]] },
-        { color: C.lime,   points: [[0,4],[1,4],[2,4],[3,4],[4,4],[5,4],[6,4],[7,4],[8,5],[9,5],[10,5],[11,5],[12,5],[13,5]] },
-      ];
+
+    if (!state.pf) {
+      // Each agent path ends in the GOAL cell where its box settles.
+      // The robot animates over path[0 .. path.length-2]; the box (when pushed)
+      // is always one step ahead of the robot. Rows are picked so no two
+      // robots ever occupy the same cell — collision-free by construction.
+      state.pf = {
+        agents: [
+          {
+            color: C.signal,
+            path: [[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[7,1],[8,1]],
+            boxIdx: 3, // box starts at path[3]; goal = path.last
+            speed: 0.55,
+            offset: 0.0,
+          },
+          {
+            color: C.lime,
+            path: [[0,6],[1,6],[2,6],[3,6],[4,6],[5,6],[6,6],[7,6],[8,6],[9,6],[10,6]],
+            boxIdx: 4,
+            speed: 0.55,
+            offset: 0.9,
+          },
+          {
+            color: C.cyan,
+            path: [[13,4],[12,4],[11,4],[10,4],[9,4],[8,4],[7,4],[6,4],[5,4]],
+            boxIdx: 3,
+            speed: 0.55,
+            offset: 1.7,
+          },
+        ],
+        // Unmatched freight & unmatched goal slots (the "leftovers").
+        // Counts must match: |staticBoxes| == |staticGoals| so total
+        // boxes == total goals across the whole grid.
+        staticBoxes: [[2,3],[10,2]],
+        staticGoals: [[12,7],[3,5]],
+      };
     }
+
+    // grid
     ctx.strokeStyle = C.line;
     ctx.lineWidth = 1;
     for (let y = 0; y < rows; y++) {
       for (let x = 0; x < cols; x++) ctx.strokeRect(x * cw, y * ch, cw, ch);
     }
-    state.obstacles.forEach(k => {
-      const [x, y] = k.split(',').map(Number);
+
+    // helper: draw a crate centered on canvas coords
+    const crateInset = Math.min(cw, ch) * 0.18;
+    function drawCrate(px, py, color) {
+      const bw = cw - crateInset * 2, bh = ch - crateInset * 2;
+      const x = px - bw / 2, y = py - bh / 2;
       ctx.fillStyle = C.bgSoft;
-      ctx.fillRect(x * cw + 1, y * ch + 1, cw - 2, ch - 2);
-      ctx.fillStyle = C.mute;
-      ctx.fillRect(x * cw + cw * 0.32, y * ch + ch * 0.32, cw * 0.36, ch * 0.36);
-    });
-    state.paths.forEach((p, i) => {
-      const total = p.points.length;
-      const pos = ((t * 0.6 + i * 0.5) % total);
-      const head = Math.floor(pos);
-      const f = pos - head;
-      ctx.strokeStyle = p.color;
-      ctx.lineWidth = 1.2;
-      ctx.globalAlpha = 0.35;
+      ctx.fillRect(x, y, bw, bh);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.1;
+      ctx.strokeRect(x, y, bw, bh);
       ctx.beginPath();
-      for (let k = 0; k <= head; k++) {
-        const x = p.points[k][0] * cw + cw/2;
-        const y = p.points[k][1] * ch + ch/2;
+      ctx.moveTo(x, y);          ctx.lineTo(x + bw, y + bh);
+      ctx.moveTo(x + bw, y);     ctx.lineTo(x, y + bh);
+      ctx.stroke();
+    }
+
+    // goals: dashed outline cells (colored = assigned to an agent, faint = leftover)
+    const goalInset = Math.min(cw, ch) * 0.22;
+    function drawGoal(gx, gy, color) {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 3]);
+      ctx.strokeRect(gx * cw + goalInset, gy * ch + goalInset,
+                     cw - goalInset * 2, ch - goalInset * 2);
+      ctx.setLineDash([]);
+    }
+    state.pf.agents.forEach(a => {
+      const g = a.path[a.path.length - 1];
+      drawGoal(g[0], g[1], a.color);
+    });
+    state.pf.staticGoals.forEach(g => drawGoal(g[0], g[1], C.faint));
+
+    // static / leftover boxes
+    state.pf.staticBoxes.forEach(b => {
+      drawCrate(b[0] * cw + cw / 2, b[1] * ch + ch / 2, C.mute);
+    });
+
+    // agents + their pushed boxes
+    state.pf.agents.forEach(a => {
+      // Robot occupies path[0 .. robotEnd]; box occupies path[1 .. goalIdx].
+      // robotEnd = path.length - 2 guarantees robot is always exactly one
+      // cell behind the crate it is pushing (no overlap, ever).
+      const robotEnd = a.path.length - 2;
+      const goalIdx  = a.path.length - 1;
+      const cycle    = robotEnd + 2.6;          // small dwell before reset
+      const tp = (t * a.speed + a.offset) % cycle;
+      const p  = Math.max(0, Math.min(robotEnd, tp));
+      const i0 = Math.min(robotEnd, Math.floor(p));
+      const i1 = Math.min(robotEnd, i0 + 1);
+      const f  = p - i0;
+      const c0 = a.path[i0], c1 = a.path[i1];
+      const rx = (c0[0] + (c1[0] - c0[0]) * f) * cw + cw / 2;
+      const ry = (c0[1] + (c1[1] - c0[1]) * f) * ch + ch / 2;
+
+      // box position: 1 cell ahead of robot once push has started
+      let bx, by;
+      const pushStartP = a.boxIdx - 1;
+      if (p < pushStartP) {
+        const b = a.path[a.boxIdx];
+        bx = b[0] * cw + cw / 2;
+        by = b[1] * ch + ch / 2;
+      } else {
+        const bi0 = Math.min(goalIdx, i0 + 1);
+        const bi1 = Math.min(goalIdx, i1 + 1);
+        const b0 = a.path[bi0], b1 = a.path[bi1];
+        bx = (b0[0] + (b1[0] - b0[0]) * f) * cw + cw / 2;
+        by = (b0[1] + (b1[1] - b0[1]) * f) * ch + ch / 2;
+      }
+
+      // trail: cell centers up through i0, then a final segment to the
+      // live ball position so the line never lags behind the moving robot
+      ctx.strokeStyle = a.color;
+      ctx.lineWidth = 1.4;
+      ctx.globalAlpha = 0.42;
+      ctx.beginPath();
+      for (let k = 0; k <= i0; k++) {
+        const x = a.path[k][0] * cw + cw / 2;
+        const y = a.path[k][1] * ch + ch / 2;
         if (k === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
       }
+      ctx.lineTo(rx, ry);
       ctx.stroke();
       ctx.globalAlpha = 1;
-      const a = p.points[head];
-      const b = p.points[Math.min(head + 1, total - 1)];
-      const ax = (a[0] + (b[0] - a[0]) * f) * cw + cw/2;
-      const ay = (a[1] + (b[1] - a[1]) * f) * ch + ch/2;
-      ctx.fillStyle = p.color;
+
+      // pushed crate
+      drawCrate(bx, by, a.color);
+
+      // robot
+      ctx.fillStyle = a.color;
       ctx.beginPath();
-      ctx.arc(ax, ay, Math.min(cw, ch) * 0.28, 0, Math.PI * 2);
+      ctx.arc(rx, ry, Math.min(cw, ch) * 0.22, 0, Math.PI * 2);
       ctx.fill();
+      // small inner notch so it reads as a chassis, not just a dot
+      ctx.fillStyle = C.bg;
+      ctx.fillRect(rx - 1.5, ry - 1.5, 3, 3);
     });
   };
 
