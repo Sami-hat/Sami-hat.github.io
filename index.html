@@ -1,616 +1,822 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sami Hatoum — Software & ML engineer</title>
-  <meta name="description" content="Sami Hatoum — Computer Science (St Andrews), MSc AI candidate at UCL. Software and machine learning engineer." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sami Hatoum — Software & ML engineer</title>
+    <meta
+      name="description"
+      content="Sami Hatoum — Computer Science (St Andrews), MSc AI candidate at UCL. Software and machine learning engineer."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="styles.css" />
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-
-  <!-- ─── HEADER ────────────────────────────────────────────── -->
-  <header class="site-header" id="site-header">
-    <div class="wrap">
-      <a class="brand" href="#top">
-        <span class="dot"></span>
-        <span>SAMI HATOUM</span>
-      </a>
-
-      <nav class="nav">
-        <a href="#work"><span class="num">01</span>WORK</a>
-        <a href="#projects"><span class="num">02</span>PROJECTS</a>
-        <a href="#skills"><span class="num">03</span>SKILLS</a>
-        <a href="#contact"><span class="num">04</span>CONTACT</a>
-      </nav>
-
-      <a class="cv-btn" href="assets/CV.pdf" download>CV / PDF</a>
-    </div>
-  </header>
-
-  <main id="top">
-
-    <!-- ─── HERO ────────────────────────────────────────────── -->
-    <section class="hero" data-screen-label="Hero">
-      <canvas class="hero-canvas" data-hero></canvas>
+  <body>
+    <!-- ─── HEADER ────────────────────────────────────────────── -->
+    <header class="site-header" id="site-header">
       <div class="wrap">
+        <a class="brand" href="#top">
+          <span class="dot"></span>
+          <span>SAMI HATOUM</span>
+        </a>
 
-        <div class="hero-meta-bar">
-          <div>
-            <span>Status</span>
-            <span class="v"><span class="live"></span>Available · Starting Aug 2026</span>
-          </div>
-          <div>
-            <span>Location</span>
-            <span class="v">London, UK</span>
-          </div>
-          <div>
-            <span>Education</span>
-            <span class="v">MSc Artificial Intelligence · UCL</span>
-          </div>
-        </div>
+        <nav class="nav">
+          <a href="#work"><span class="num">01</span>WORK</a>
+          <a href="#projects"><span class="num">02</span>PROJECTS</a>
+          <a href="#skills"><span class="num">03</span>SKILLS</a>
+          <a href="#contact"><span class="num">04</span>CONTACT</a>
+        </nav>
 
-        <div class="hero-grid">
-          <div>
-            <h1 class="hero-title display">
-              <span class="l">Sami</span>
-              <span class="l l-2"><span class="underline">Hatoum.</span></span>
-            </h1>
-            <p class="hero-tagline">Software &amp; machine learning engineer.</p>
-          </div>
-
-          <div class="hero-side">
-            <figure class="portrait-frame">
-              <img class="portrait-img" src="images/Head Shot.jpg" alt="Sami Hatoum" />
-              <span class="portrait-corner tl"></span>
-              <span class="portrait-corner tr"></span>
-              <span class="portrait-corner bl"></span>
-              <span class="portrait-corner br"></span>
-              <figcaption class="portrait-meta">
-                <span>
-</span>
-                <span>
-</span>
-              </figcaption>
-            </figure>
-            <p class="hero-lede">CS graduate from the University of St Andrews. MSc Artificial Intelligence candidate at UCL. Two software engineering internships at PwC delivering production ML and full-stack systems.</p>
-          </div>
-        </div>
-
-        <div class="hero-bottom">
-          <span>↓ Scroll</span>
-          <!-- <span class="scroll-hint"><span>© 2026</span><span class="arr"></span></span> -->
-        </div>
-
+        <a class="cv-btn" href="assets/CV.pdf" download>CV / PDF</a>
       </div>
-    </section>
+    </header>
 
-    <!-- ─── MARQUEE ─────────────────────────────────────────── -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>BUILDING <span class="sep"></span></span>
-        <span class="ital">shipping <span class="sep"></span></span>
-        <span>TRAINING <span class="sep"></span></span>
-        <span class="ital">deploying <span class="sep"></span></span>
-        <span>DEBUGGING <span class="sep"></span></span>
-        <span class="ital">refactoring <span class="sep"></span></span>
-        <span>OPTIMISING <span class="sep"></span></span>
-        <span class="ital">measuring <span class="sep"></span></span>
-        <!-- duplicate for seamless loop -->
-        <span>BUILDING <span class="sep"></span></span>
-        <span class="ital">shipping <span class="sep"></span></span>
-        <span>TRAINING <span class="sep"></span></span>
-        <span class="ital">deploying <span class="sep"></span></span>
-        <span>DEBUGGING <span class="sep"></span></span>
-        <span class="ital">refactoring <span class="sep"></span></span>
-        <span>OPTIMISING <span class="sep"></span></span>
-        <span class="ital">measuring <span class="sep"></span></span>
-      </div>
-    </div>
-
-    <!-- ─── WORK ────────────────────────────────────────────── -->
-    <section class="sec" id="work" data-screen-label="Work">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="idx"><span class="num">01</span>Experience</div>
-          <div>
-            <h2 class="ttl display"><em>Experience.</em></h2>
-            <div class="sub">PwC × 2 — ML pipelines &amp; full-stack systems</div>
-          </div>
-        </div>
-
-        <div class="work-list">
-
-          <article class="work-item reveal">
-            <div class="yr">2024<span class="y">summer</span></div>
+    <main id="top">
+      <!-- ─── HERO ────────────────────────────────────────────── -->
+      <section class="hero" data-screen-label="Hero">
+        <canvas class="hero-canvas" data-hero></canvas>
+        <div class="wrap">
+          <div class="hero-meta-bar">
             <div>
-              <h3 class="display"><em>Software</em> Engineering Intern</h3>
-              <p class="org">PwC · Dubai</p>
-              <p>
-                Built an internal client-onboarding dashboard in React + Node that replaced a
-                manual spreadsheet workflow for a financial-services team. Designed a PostgreSQL
-                data model with role-based access control, integrating with PwC's internal SSO.
-                Wrote GitHub Actions pipelines with automated testing and staged deploys to AWS.
-              </p>
+              <span>Status</span>
+              <span class="v"
+                ><span class="live"></span>Available · Starting Aug 2026</span
+              >
             </div>
             <div>
-              <div class="stats">
-                <div class="stat"><span class="n">3d→4h</span><span class="l">onboarding time</span></div>
-                <div class="stat"><span class="n">90%+</span><span class="l">code coverage</span></div>
-                <div class="stat"><span class="n">45</span><span class="l">tests written</span></div>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-item reveal">
-            <div class="yr">2023<span class="y">summer</span></div>
-            <div>
-              <h3 class="display"><em>Software</em> Engineering Intern</h3>
-              <p class="org">PwC · Dubai</p>
-              <p>
-                Built a sentiment-analysis model using PyTorch BERT to automate customer
-                feedback classification for a retail client. Engineered containerised deployment
-                with Flask API on AWS EC2, auto-scaling across multiple instances. Wired up
-                CloudWatch dashboards and a retraining script triggered when weekly evaluation
-                accuracy dropped below 85%.
-              </p>
+              <span>Location</span>
+              <span class="v">London, UK</span>
             </div>
             <div>
-              <div class="stats">
-                <div class="stat"><span class="n">91%</span><span class="l">F1 score</span></div>
-                <div class="stat"><span class="n">10k</span><span class="l">reviews / day</span></div>
-                <div class="stat"><span class="n">−60%</span><span class="l">batch time</span></div>
-              </div>
+              <span>Education</span>
+              <span class="v">MSc Artificial Intelligence · UCL</span>
             </div>
-          </article>
+          </div>
 
+          <div class="hero-grid">
+            <div>
+              <h1 class="hero-title display">
+                <span class="l">Sami</span>
+                <span class="l l-2"
+                  ><span class="underline">Hatoum.</span></span
+                >
+              </h1>
+              <p class="hero-tagline">
+                Software &amp; machine learning engineer.
+              </p>
+            </div>
+
+            <div class="hero-side">
+              <figure class="portrait-frame">
+                <img
+                  class="portrait-img"
+                  src="images/Head Shot.jpg"
+                  alt="Sami Hatoum"
+                />
+                <span class="portrait-corner tl"></span>
+                <span class="portrait-corner tr"></span>
+                <span class="portrait-corner bl"></span>
+                <span class="portrait-corner br"></span>
+                <figcaption class="portrait-meta">
+                  <span> </span>
+                  <span> </span>
+                </figcaption>
+              </figure>
+              <p class="hero-lede">
+                CS graduate from the University of St Andrews. MSc Artificial
+                Intelligence candidate at UCL. Two software engineering
+                internships at PwC delivering production ML and full-stack
+                systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-bottom">
+            <span>↓ Scroll</span>
+            <!-- <span class="scroll-hint"><span>© 2026</span><span class="arr"></span></span> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── MARQUEE ─────────────────────────────────────────── -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>BUILDING <span class="sep"></span></span>
+          <span class="ital">shipping <span class="sep"></span></span>
+          <span>TRAINING <span class="sep"></span></span>
+          <span class="ital">deploying <span class="sep"></span></span>
+          <span>DEBUGGING <span class="sep"></span></span>
+          <span class="ital">refactoring <span class="sep"></span></span>
+          <span>OPTIMISING <span class="sep"></span></span>
+          <span class="ital">measuring <span class="sep"></span></span>
+          <!-- duplicate for seamless loop -->
+          <span>BUILDING <span class="sep"></span></span>
+          <span class="ital">shipping <span class="sep"></span></span>
+          <span>TRAINING <span class="sep"></span></span>
+          <span class="ital">deploying <span class="sep"></span></span>
+          <span>DEBUGGING <span class="sep"></span></span>
+          <span class="ital">refactoring <span class="sep"></span></span>
+          <span>OPTIMISING <span class="sep"></span></span>
+          <span class="ital">measuring <span class="sep"></span></span>
         </div>
       </div>
-    </section>
 
-    <!-- ─── PROJECTS ────────────────────────────────────────── -->
-    <section class="sec" id="projects" data-screen-label="Projects">
+      <!-- ─── WORK ────────────────────────────────────────────── -->
+      <section class="sec" id="work" data-screen-label="Work">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <div class="idx"><span class="num">01</span>Experience</div>
+            <div>
+              <h2 class="ttl display"><em>Experience.</em></h2>
+              <div class="sub">
+                PwC × 2 — ML pipelines &amp; full-stack systems
+              </div>
+            </div>
+          </div>
+
+          <div class="work-list">
+            <article class="work-item reveal">
+              <div class="yr">2024<span class="y">summer</span></div>
+              <div>
+                <h3 class="display"><em>Software</em> Engineering Intern</h3>
+                <p class="org">PwC · Dubai</p>
+                <p>
+                  Built an internal client-onboarding dashboard in React + Node
+                  that replaced a manual spreadsheet workflow for a
+                  financial-services team. Designed a PostgreSQL data model with
+                  role-based access control, integrating with PwC's internal
+                  SSO. Wrote GitHub Actions pipelines with automated testing and
+                  staged deploys to AWS.
+                </p>
+              </div>
+              <div>
+                <div class="stats">
+                  <div class="stat">
+                    <span class="n">3d→4h</span
+                    ><span class="l">onboarding time</span>
+                  </div>
+                  <div class="stat">
+                    <span class="n">90%+</span
+                    ><span class="l">code coverage</span>
+                  </div>
+                  <div class="stat">
+                    <span class="n">45</span
+                    ><span class="l">tests written</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-item reveal">
+              <div class="yr">2023<span class="y">summer</span></div>
+              <div>
+                <h3 class="display"><em>Software</em> Engineering Intern</h3>
+                <p class="org">PwC · Dubai</p>
+                <p>
+                  Built a sentiment-analysis model using PyTorch BERT to
+                  automate customer feedback classification for a retail client.
+                  Engineered containerised deployment with Flask API on AWS EC2,
+                  auto-scaling across multiple instances. Wired up CloudWatch
+                  dashboards and a retraining script triggered when weekly
+                  evaluation accuracy dropped below 85%.
+                </p>
+              </div>
+              <div>
+                <div class="stats">
+                  <div class="stat">
+                    <span class="n">91%</span><span class="l">F1 score</span>
+                  </div>
+                  <div class="stat">
+                    <span class="n">10k</span
+                    ><span class="l">reviews / day</span>
+                  </div>
+                  <div class="stat">
+                    <span class="n">−60%</span><span class="l">batch time</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── PROJECTS ────────────────────────────────────────── -->
+      <section class="sec" id="projects" data-screen-label="Projects">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <div class="idx"><span class="num">02</span>Selected projects</div>
+            <div>
+              <h2 class="ttl display"><em>Projects.</em></h2>
+              <div class="sub">
+                A selection of recent work — full source, documentation, and
+                tests linked
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-list">
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="ast">
+                <span class="viz-label">// abstract syntax tree</span>
+                <span class="viz-num">01</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">01 /</span> BACKEND · DATABASES
+                </div>
+                <h3 class="display">
+                  PostgreSQL <em>Query</em> Analysis &amp; <em>Optimisation</em>
+                </h3>
+                <p>
+                  Performance analyser that parses query ASTs and evaluates
+                  EXPLAIN plans to recommend indexes. Analysed 200+ production
+                  queries from a 5M-row database, identifying 21 missing indexes
+                  across 12 tables.
+                </p>
+                <div class="stack">
+                  <span>python</span><span>postgresql</span><span>aws/ecs</span
+                  ><span>docker</span><span>d3</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/query-optimiser"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/query-optimiser.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="collab">
+                <span class="viz-label">// concurrent editing</span>
+                <span class="viz-num">02</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">02 /</span> FULL STACK · REALTIME
+                </div>
+                <h3 class="display">
+                  Real-time <em>Collaborative</em> Code <em>Editor</em>
+                </h3>
+                <p>
+                  Multi-user editor with WebSockets and Operational Transform
+                  for conflict-free concurrent editing. Redis pub/sub for
+                  horizontal scaling, sub-100ms sync latency, 85+ tests covering
+                  OT convergence and WebSocket fault tolerance.
+                </p>
+                <div class="stack">
+                  <span>react</span><span>node</span><span>websockets</span
+                  ><span>redis</span><span>postgresql</span><span>aws</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/rt-code-editor"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/collaborative-editor.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="uncertainty">
+                <span class="viz-label">// uncertainty heatmap</span>
+                <span class="viz-num">03</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">03 /</span> DEEP LEARNING · MEDICAL
+                </div>
+                <h3 class="display">
+                  <em>Decomposing the Generalisation Gap</em> in Medical Image
+                  Segmentation
+                </h3>
+                <p>
+                  Measuring how much an AI segmentation model degrades when
+                  moved from its training hospital to an unseen one, and
+                  splitting that drop into two causes: too little training data
+                  versus genuine distribution shift. Data-scaling learning
+                  curves on an independent multi-scanner cohort separate the
+                  two. A selective-prediction layer, deferring low-confidence
+                  scans to a radiologist, supports the diagnosis.
+                </p>
+                <div class="stack">
+                  <span>python</span><span>pytorch</span
+                  ><span>distribution-shift</span><span>uncertainty</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing"
+                    target="_blank"
+                    rel="noopener"
+                    >Report →</a
+                  >
+                  <!-- <a href="projects/selective-prediction.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="hierarchical">
+                <span class="viz-label">// hierarchical loss</span>
+                <span class="viz-num">04</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">04 /</span> DEEP LEARNING · MEDICAL
+                </div>
+                <h3 class="display">
+                  <em>Hierarchically Weighted</em> Image Segmentation
+                </h3>
+                <p>
+                  Hierarchical loss function encoding radiosensitivity and
+                  anatomical proximity for prostate IMRT planning. Trained on
+                  589 multi-institutional MRI volumes. 0.886 mean foreground
+                  DSC. NVB improved 0.630 → 0.659 over the unweighted baseline.
+                </p>
+                <div class="stack">
+                  <span>python</span><span>pytorch</span><span>3d res-unet</span
+                  ><span>imrt</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing"
+                    target="_blank"
+                    rel="noopener"
+                    >Report →</a
+                  >
+                  <!-- <a href="projects/weighted-segmentation.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="crypto">
+                <span class="viz-label">// aes-256 stream</span>
+                <span class="viz-num">05</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">05 /</span> BACKEND · SECURITY
+                </div>
+                <h3 class="display">
+                  <em>Cryptographically Secure</em> File Server
+                </h3>
+                <p>
+                  Zero-knowledge encrypted file storage. AES-256 encryption,
+                  RSA-2048 key exchange, HMAC-SHA256 integrity verification.
+                  Capability-based access control. Load tested at 50 concurrent
+                  sessions / 200 ops per second. Validated against OWASP Top 10.
+                </p>
+                <div class="stack">
+                  <span>java</span><span>postgresql</span><span>aws</span
+                  ><span>jmeter</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/secure-file-server"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/secure-file-server.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="sokoban">
+                <span class="viz-label">// pcg level demo</span>
+                <span class="viz-num">06</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">06 /</span> ALGORITHMS · DISSERTATION
+                </div>
+                <h3 class="display">
+                  Sokoban <em>Procedural </em> Puzzle <em>Generator</em>
+                </h3>
+                <p>
+                  BSc dissertation. Java PCG tool for PSPACE-Complete Sokoban
+                  puzzles, working backwards from goal states. Combines
+                  stochastic generation and a Two-Archive evolutionary
+                  algorithm; outperformed hand-crafted baselines against JSoko
+                  solver.
+                </p>
+                <div class="stack">
+                  <span>java</span><span>evolutionary alg.</span
+                  ><span>jsoko</span><span>tableau</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/sokoban-pcg"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/sokoban-generator.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="phone">
+                <span class="viz-label">// react native</span>
+                <span class="viz-num">07</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">07 /</span> FULL STACK · MOBILE
+                </div>
+                <h3 class="display"><em>Grocery</em> Management App</h3>
+                <p>
+                  React Native food-tracking app to reduce household waste. Node
+                  REST API on Vercel with RDS PostgreSQL; Redis caching for
+                  recipe APIs; push notifications via AWS SNS for expiration
+                  alerts. Verified 60 FPS on mid-tier devices.
+                </p>
+                <div class="stack">
+                  <span>react native</span><span>node</span
+                  ><span>postgresql</span><span>redis</span><span>aws/sns</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/grocery-manager"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/grocery-manager.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="scatter">
+                <span class="viz-label">// decision boundary</span>
+                <span class="viz-num">08</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">08 /</span> MACHINE LEARNING
+                </div>
+                <h3 class="display">Automated <em>Algorithm</em> Selection</h3>
+                <p>
+                  Solver-selection tool using scikit-learn to predict optimal
+                  solver performance per instance. Benchmarked classification
+                  and regression baselines against SBS/VBS; feature
+                  normalisation and hyperparameter tuning.
+                </p>
+                <div class="stack">
+                  <span>python</span><span>scikit-learn</span
+                  ><span>hp tuning</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/automated-alogirthm-selection"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/algorithm-selection.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="pathfind">
+                <span class="viz-label">// multi-agent paths</span>
+                <span class="viz-num">09</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">09 /</span> ALGORITHMS · CSP
+                </div>
+                <h3 class="display">Multi-agent <em>Pathfinding</em> CSP</h3>
+                <p>
+                  Constraint-satisfaction solution for multi-agent pathfinding
+                  in automated warehouses. Declarative programming in Essence
+                  Prime; designed decision variables and constraints for
+                  collision-free robot paths with symmetry breaking.
+                </p>
+                <div class="stack">
+                  <span>essence prime</span><span>minion solver</span
+                  ><span>sat</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/multi-agent-pathfinding"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/multi-agent-pathfinding.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+
+            <article class="proj-card reveal">
+              <div class="proj-viz" data-viz="pubsub">
+                <span class="viz-label">// pub-sub bus</span>
+                <span class="viz-num">10</span>
+              </div>
+              <div class="proj-info">
+                <div class="cat">
+                  <span class="n">10 /</span> BACKEND · DISTRIBUTED
+                </div>
+                <h3 class="display"><em>Message-oriented</em> Middleware</h3>
+                <p>
+                  Competing-consumer publish-subscribe messaging using Java RMI.
+                  Asynchronous event distribution across network channels with
+                  partition-based queue management, backup queues for crash
+                  recovery and at-least-once delivery guarantees.
+                </p>
+                <div class="stack">
+                  <span>java</span><span>rmi</span><span>pub-sub</span
+                  ><span>fifo</span>
+                </div>
+                <div class="links">
+                  <a
+                    class="primary"
+                    href="https://github.com/Sami-hat/message-middleware"
+                    target="_blank"
+                    rel="noopener"
+                    >GitHub →</a
+                  >
+                  <!-- <a href="projects/message-middleware.html">Details</a> -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── MARQUEE 2 ───────────────────────────────────────── -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>PYTHON <span class="sep"></span></span>
+          <span class="ital">pytorch <span class="sep"></span></span>
+          <span>TYPESCRIPT <span class="sep"></span></span>
+          <span class="ital">react <span class="sep"></span></span>
+          <span>POSTGRES <span class="sep"></span></span>
+          <span class="ital">redis <span class="sep"></span></span>
+          <span>AWS <span class="sep"></span></span>
+          <span class="ital">docker <span class="sep"></span></span>
+          <span>KUBERNETES <span class="sep"></span></span>
+          <span class="ital">linux <span class="sep"></span></span>
+          <span>PYTHON <span class="sep"></span></span>
+          <span class="ital">pytorch <span class="sep"></span></span>
+          <span>TYPESCRIPT <span class="sep"></span></span>
+          <span class="ital">react <span class="sep"></span></span>
+          <span>POSTGRES <span class="sep"></span></span>
+          <span class="ital">redis <span class="sep"></span></span>
+          <span>AWS <span class="sep"></span></span>
+          <span class="ital">docker <span class="sep"></span></span>
+          <span>KUBERNETES <span class="sep"></span></span>
+          <span class="ital">linux <span class="sep"></span></span>
+        </div>
+      </div>
+
+      <!-- ─── SKILLS ──────────────────────────────────────────── -->
+      <section class="sec" id="skills" data-screen-label="Skills">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <div class="idx"><span class="num">03</span>Technical skills</div>
+            <div>
+              <h2 class="ttl display"><em>Skills.</em></h2>
+              <div class="sub">
+                Working day-to-day across languages, frameworks, and
+                infrastructure
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-grid reveal">
+            <div class="skill-block">
+              <h3>Languages</h3>
+              <ul>
+                <li><em>Python</em></li>
+                <li>Java</li>
+                <li>TypeScript</li>
+                <li>JavaScript</li>
+                <li>C / C++</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+
+            <div class="skill-block">
+              <h3>Frameworks</h3>
+              <ul>
+                <li><em>React</em> / Native</li>
+                <li>Next.js</li>
+                <li>Node / Express</li>
+                <li>Flask</li>
+                <li>FastAPI</li>
+                <li>PyTorch</li>
+              </ul>
+            </div>
+
+            <div class="skill-block">
+              <h3>Cloud &amp; ops</h3>
+              <ul>
+                <li><em>AWS</em></li>
+                <li>Docker</li>
+                <li>Kubernetes</li>
+                <li>GitHub Actions</li>
+                <li>CI/CD</li>
+                <li>Linux</li>
+              </ul>
+            </div>
+
+            <div class="skill-block">
+              <h3>Data &amp; test</h3>
+              <ul>
+                <li><em>PostgreSQL</em></li>
+                <li>Redis</li>
+                <li>Pandas / NumPy</li>
+                <li>Jest</li>
+                <li>Pytest</li>
+                <li>Locust</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── CONTACT ─────────────────────────────────────────── -->
+      <section class="sec" id="contact" data-screen-label="Contact">
+        <div class="wrap">
+          <div class="sec-head reveal">
+            <div class="idx"><span class="num">04</span>Contact</div>
+            <div>
+              <h2 class="ttl display"><em>Get in touch.</em></h2>
+              <div class="sub">
+                For roles, collaboration, or research enquiries
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-block">
+            <div class="reveal">
+              <h3 class="contact-heading display">
+                <em>Get in</em><br />touch<span class="caret"></span>
+              </h3>
+              <a class="email-link" href="mailto:s.hatoum@proton.me"
+                >s.hatoum@proton.me</a
+              >
+
+              <dl class="contact-meta">
+                <dt>Loc</dt>
+                <dd>London, UK</dd>
+                <dt>GitHub</dt>
+                <dd>
+                  <a
+                    href="https://github.com/Sami-hat"
+                    target="_blank"
+                    rel="noopener"
+                    >github.com/Sami-hat</a
+                  >
+                </dd>
+                <dt>LinkedIn</dt>
+                <dd>
+                  <a
+                    href="https://www.linkedin.com/in/sami-hatoum-dev/"
+                    target="_blank"
+                    rel="noopener"
+                    >in/sami-hatoum-dev</a
+                  >
+                </dd>
+                <dt>CV</dt>
+                <dd><a href="assets/CV.pdf" download>Download (PDF)</a></dd>
+              </dl>
+            </div>
+
+            <form class="contact-form reveal" action="#" method="get">
+              <div class="field">
+                <label for="cf-name">Name</label>
+                <input
+                  type="text"
+                  id="cf-name"
+                  name="cf-name"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input
+                  type="email"
+                  id="cf-email"
+                  name="cf-email"
+                  placeholder="you@domain.com"
+                />
+              </div>
+              <div class="field">
+                <label for="cf-message">Message</label>
+                <textarea
+                  id="cf-message"
+                  name="cf-message"
+                  placeholder="A short message…"
+                  rows="5"
+                ></textarea>
+              </div>
+              <button class="btn-send" type="submit">
+                Send <span aria-hidden="true">→</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
       <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="idx"><span class="num">02</span>Selected projects</div>
-          <div>
-            <h2 class="ttl display"><em>Projects.</em></h2>
-            <div class="sub">A selection of recent work — full source, documentation, and tests linked</div>
-          </div>
-        </div>
-
-        <div class="proj-list">
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="ast">
-              <span class="viz-label">// abstract syntax tree</span>
-              <span class="viz-num">01</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">01 /</span> BACKEND · DATABASES</div>
-              <h3 class="display">PostgreSQL <em>Query</em> Analysis &amp; <em>Optimisation</em></h3>
-              <p>
-                Performance analyser that parses query ASTs and evaluates EXPLAIN plans to
-                recommend indexes. Analysed 200+ production queries from a 5M-row database,
-                identifying 21 missing indexes across 12 tables.
-              </p>
-              <div class="stack">
-                <span>python</span><span>postgresql</span><span>aws/ecs</span><span>docker</span><span>d3</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/query-optimiser" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/query-optimiser.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="collab">
-              <span class="viz-label">// concurrent editing</span>
-              <span class="viz-num">02</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">02 /</span> FULL STACK · REALTIME</div>
-              <h3 class="display">Real-time <em>Collaborative</em> Code <em>Editor</em></h3>
-              <p>
-                Multi-user editor with WebSockets and Operational Transform for conflict-free
-                concurrent editing. Redis pub/sub for horizontal scaling, sub-100ms sync latency,
-                85+ tests covering OT convergence and WebSocket fault tolerance.
-              </p>
-              <div class="stack">
-                <span>react</span><span>node</span><span>websockets</span><span>redis</span><span>postgresql</span><span>aws</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/rt-code-editor" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/collaborative-editor.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="uncertainty">
-              <span class="viz-label">// uncertainty heatmap</span>
-              <span class="viz-num">03</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">03 /</span> DEEP LEARNING · MEDICAL</div>
-              <h3 class="display"><em>Fair Selective Prediction</em> for Medical Image Segmentation</h3>
-              <p>
-                Model-agnostic framework deciding when an AI segmentation model is clinically
-                safe or should defer to a radiologist. Voxel-level uncertainty via MCD and TTA,
-                aggregated via entropy and mutual information into per-scan deferral decisions.
-              </p>
-              <div class="stack">
-                <span>python</span><span>pytorch</span><span>uncertainty</span><span>calibration</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing" target="_blank" rel="noopener">Report →</a>
-                <!-- <a href="projects/selective-prediction.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="hierarchical">
-              <span class="viz-label">// hierarchical loss</span>
-              <span class="viz-num">04</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">04 /</span> DEEP LEARNING · MEDICAL</div>
-              <h3 class="display"><em>Hierarchically Weighted</em> Image Segmentation</h3>
-              <p>
-                Hierarchical loss function encoding radiosensitivity and anatomical proximity
-                for prostate IMRT planning. Trained on 589 multi-institutional MRI volumes.
-                0.886 mean foreground DSC. NVB improved 0.630 → 0.659 over the unweighted baseline.
-              </p>
-              <div class="stack">
-                <span>python</span><span>pytorch</span><span>3d res-unet</span><span>imrt</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://drive.google.com/drive/folders/1IkHcwQFlWln-zchoypCVIbPE6HDxfDKq?usp=sharing" target="_blank" rel="noopener">Report →</a>
-                <!-- <a href="projects/weighted-segmentation.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="crypto">
-              <span class="viz-label">// aes-256 stream</span>
-              <span class="viz-num">05</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">05 /</span> BACKEND · SECURITY</div>
-              <h3 class="display"><em>Cryptographically Secure</em> File Server</h3>
-              <p>
-                Zero-knowledge encrypted file storage. AES-256 encryption, RSA-2048 key exchange,
-                HMAC-SHA256 integrity verification. Capability-based access control. Load tested
-                at 50 concurrent sessions / 200 ops per second. Validated against OWASP Top 10.
-              </p>
-              <div class="stack">
-                <span>java</span><span>postgresql</span><span>aws</span><span>jmeter</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/secure-file-server" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/secure-file-server.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="sokoban">
-              <span class="viz-label">// pcg level demo</span>
-              <span class="viz-num">06</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">06 /</span> ALGORITHMS · DISSERTATION</div>
-              <h3 class="display">Sokoban <em>Procedural </em> Puzzle <em>Generator</em></h3>
-              <p>
-                BSc dissertation. Java PCG tool for PSPACE-Complete Sokoban puzzles, working
-                backwards from goal states. Combines stochastic generation and a Two-Archive
-                evolutionary algorithm; outperformed hand-crafted baselines against JSoko solver.
-              </p>
-              <div class="stack">
-                <span>java</span><span>evolutionary alg.</span><span>jsoko</span><span>tableau</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/sokoban-pcg" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/sokoban-generator.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="phone">
-              <span class="viz-label">// react native</span>
-              <span class="viz-num">07</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">07 /</span> FULL STACK · MOBILE</div>
-              <h3 class="display"><em>Grocery</em> Management App</h3>
-              <p>
-                React Native food-tracking app to reduce household waste. Node REST API on
-                Vercel with RDS PostgreSQL; Redis caching for recipe APIs; push notifications
-                via AWS SNS for expiration alerts. Verified 60 FPS on mid-tier devices.
-              </p>
-              <div class="stack">
-                <span>react native</span><span>node</span><span>postgresql</span><span>redis</span><span>aws/sns</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/grocery-manager" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/grocery-manager.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="scatter">
-              <span class="viz-label">// decision boundary</span>
-              <span class="viz-num">08</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">08 /</span> MACHINE LEARNING</div>
-              <h3 class="display">Automated <em>Algorithm</em> Selection</h3>
-              <p>
-                Solver-selection tool using scikit-learn to predict optimal solver performance
-                per instance. Benchmarked classification and regression baselines against SBS/VBS;
-                feature normalisation and hyperparameter tuning.
-              </p>
-              <div class="stack">
-                <span>python</span><span>scikit-learn</span><span>hp tuning</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/automated-alogirthm-selection" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/algorithm-selection.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="pathfind">
-              <span class="viz-label">// multi-agent paths</span>
-              <span class="viz-num">09</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">09 /</span> ALGORITHMS · CSP</div>
-              <h3 class="display">Multi-agent <em>Pathfinding</em> CSP</h3>
-              <p>
-                Constraint-satisfaction solution for multi-agent pathfinding in automated
-                warehouses. Declarative programming in Essence Prime; designed decision
-                variables and constraints for collision-free robot paths with symmetry breaking.
-              </p>
-              <div class="stack">
-                <span>essence prime</span><span>minion solver</span><span>sat</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/multi-agent-pathfinding" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/multi-agent-pathfinding.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-          <article class="proj-card reveal">
-            <div class="proj-viz" data-viz="pubsub">
-              <span class="viz-label">// pub-sub bus</span>
-              <span class="viz-num">10</span>
-            </div>
-            <div class="proj-info">
-              <div class="cat"><span class="n">10 /</span> BACKEND · DISTRIBUTED</div>
-              <h3 class="display"><em>Message-oriented</em> Middleware</h3>
-              <p>
-                Competing-consumer publish-subscribe messaging using Java RMI. Asynchronous
-                event distribution across network channels with partition-based queue management,
-                backup queues for crash recovery and at-least-once delivery guarantees.
-              </p>
-              <div class="stack">
-                <span>java</span><span>rmi</span><span>pub-sub</span><span>fifo</span>
-              </div>
-              <div class="links">
-                <a class="primary" href="https://github.com/Sami-hat/message-middleware" target="_blank" rel="noopener">GitHub →</a>
-                <!-- <a href="projects/message-middleware.html">Details</a> -->
-              </div>
-            </div>
-          </article>
-
-        </div>
+        <span>© SAMI HATOUM · 2026</span>
+        <span> </span>
+        <span><a href="#top">↑ TO TOP</a></span>
       </div>
-    </section>
+    </footer>
 
-    <!-- ─── MARQUEE 2 ───────────────────────────────────────── -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>PYTHON <span class="sep"></span></span>
-        <span class="ital">pytorch <span class="sep"></span></span>
-        <span>TYPESCRIPT <span class="sep"></span></span>
-        <span class="ital">react <span class="sep"></span></span>
-        <span>POSTGRES <span class="sep"></span></span>
-        <span class="ital">redis <span class="sep"></span></span>
-        <span>AWS <span class="sep"></span></span>
-        <span class="ital">docker <span class="sep"></span></span>
-        <span>KUBERNETES <span class="sep"></span></span>
-        <span class="ital">linux <span class="sep"></span></span>
-        <span>PYTHON <span class="sep"></span></span>
-        <span class="ital">pytorch <span class="sep"></span></span>
-        <span>TYPESCRIPT <span class="sep"></span></span>
-        <span class="ital">react <span class="sep"></span></span>
-        <span>POSTGRES <span class="sep"></span></span>
-        <span class="ital">redis <span class="sep"></span></span>
-        <span>AWS <span class="sep"></span></span>
-        <span class="ital">docker <span class="sep"></span></span>
-        <span>KUBERNETES <span class="sep"></span></span>
-        <span class="ital">linux <span class="sep"></span></span>
-      </div>
-    </div>
+    <!-- Sticky header behaviour -->
+    <script>
+      (function () {
+        const header = document.getElementById("site-header");
+        const onScroll = () =>
+          header.classList.toggle("scrolled", window.scrollY > 16);
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        const links = document.querySelectorAll(".nav a");
+        const map = new Map();
+        links.forEach((a) => {
+          const id = a.getAttribute("href").slice(1);
+          const el = document.getElementById(id);
+          if (el) map.set(el, a);
+        });
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((e) => {
+                if (e.isIntersecting) {
+                  links.forEach((l) => l.classList.remove("active"));
+                  map.get(e.target)?.classList.add("active");
+                }
+              });
+            },
+            { rootMargin: "-40% 0px -55% 0px" },
+          );
+          map.forEach((_, el) => io.observe(el));
+        }
+      })();
+    </script>
 
-    <!-- ─── SKILLS ──────────────────────────────────────────── -->
-    <section class="sec" id="skills" data-screen-label="Skills">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="idx"><span class="num">03</span>Technical skills</div>
-          <div>
-            <h2 class="ttl display"><em>Skills.</em></h2>
-            <div class="sub">Working day-to-day across languages, frameworks, and infrastructure</div>
-          </div>
-        </div>
+    <script src="viz.js"></script>
 
-        <div class="skills-grid reveal">
+    <!-- Tweaks defaults -->
+    <script>
+      window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/ {
+        accent: "signal-orange",
+        showMarquees: false,
+        vizDensity: "normal",
+      } /*EDITMODE-END*/;
+    </script>
 
-          <div class="skill-block">
-            <h3>Languages</h3>
-            <ul>
-              <li><em>Python</em></li>
-              <li>Java</li>
-              <li>TypeScript</li>
-              <li>JavaScript</li>
-              <li>C / C++</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-
-          <div class="skill-block">
-            <h3>Frameworks</h3>
-            <ul>
-              <li><em>React</em> / Native</li>
-              <li>Next.js</li>
-              <li>Node / Express</li>
-              <li>Flask</li>
-              <li>FastAPI</li>
-              <li>PyTorch</li>
-            </ul>
-          </div>
-
-          <div class="skill-block">
-            <h3>Cloud &amp; ops</h3>
-            <ul>
-              <li><em>AWS</em></li>
-              <li>Docker</li>
-              <li>Kubernetes</li>
-              <li>GitHub Actions</li>
-              <li>CI/CD</li>
-              <li>Linux</li>
-            </ul>
-          </div>
-
-          <div class="skill-block">
-            <h3>Data &amp; test</h3>
-            <ul>
-              <li><em>PostgreSQL</em></li>
-              <li>Redis</li>
-              <li>Pandas / NumPy</li>
-              <li>Jest</li>
-              <li>Pytest</li>
-              <li>Locust</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ─── CONTACT ─────────────────────────────────────────── -->
-    <section class="sec" id="contact" data-screen-label="Contact">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <div class="idx"><span class="num">04</span>Contact</div>
-          <div>
-            <h2 class="ttl display"><em>Get in touch.</em></h2>
-            <div class="sub">For roles, collaboration, or research enquiries</div>
-          </div>
-        </div>
-
-        <div class="contact-block">
-          <div class="reveal">
-            <h3 class="contact-heading display"><em>Get in</em><br/>touch<span class="caret"></span></h3>
-            <a class="email-link" href="mailto:s.hatoum@proton.me">s.hatoum@proton.me</a>
-
-            <dl class="contact-meta">
-              <dt>Loc</dt>      <dd>London, UK</dd>
-              <dt>GitHub</dt>   <dd><a href="https://github.com/Sami-hat" target="_blank" rel="noopener">github.com/Sami-hat</a></dd>
-              <dt>LinkedIn</dt> <dd><a href="https://www.linkedin.com/in/sami-hatoum-dev/" target="_blank" rel="noopener">in/sami-hatoum-dev</a></dd>
-              <dt>CV</dt>       <dd><a href="assets/CV.pdf" download>Download (PDF)</a></dd>
-            </dl>
-          </div>
-
-          <form class="contact-form reveal" action="#" method="get">
-            <div class="field">
-              <label for="cf-name">Name</label>
-              <input type="text" id="cf-name" name="cf-name" placeholder="Your full name" />
-            </div>
-            <div class="field">
-              <label for="cf-email">Email</label>
-              <input type="email" id="cf-email" name="cf-email" placeholder="you@domain.com" />
-            </div>
-            <div class="field">
-              <label for="cf-message">Message</label>
-              <textarea id="cf-message" name="cf-message" placeholder="A short message…" rows="5"></textarea>
-            </div>
-            <button class="btn-send" type="submit">Send <span aria-hidden="true">→</span></button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>© SAMI HATOUM · 2026</span>
-      <span>
-</span>
-      <span><a href="#top">↑ TO TOP</a></span>
-    </div>
-  </footer>
-
-  <!-- Sticky header behaviour -->
-  <script>
-    (function(){
-      const header = document.getElementById('site-header');
-      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 16);
-      onScroll();
-      window.addEventListener('scroll', onScroll, { passive: true });
-      const links = document.querySelectorAll('.nav a');
-      const map = new Map();
-      links.forEach(a => {
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if (el) map.set(el, a);
-      });
-      if ('IntersectionObserver' in window) {
-        const io = new IntersectionObserver((entries) => {
-          entries.forEach(e => {
-            if (e.isIntersecting) {
-              links.forEach(l => l.classList.remove('active'));
-              map.get(e.target)?.classList.add('active');
-            }
-          });
-        }, { rootMargin: '-40% 0px -55% 0px' });
-        map.forEach((_, el) => io.observe(el));
-      }
-    })();
-  </script>
-
-  <script src="viz.js"></script>
-
-  <!-- Tweaks defaults -->
-  <script>
-    window.TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-      "accent": "signal-orange",
-      "showMarquees": false,
-      "vizDensity": "normal"
-    }/*EDITMODE-END*/;
-  </script>
-
-  <!-- React + Babel for optional Tweaks panel -->
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-  <script type="text/babel" src="tweaks-panel.jsx"></script>
-  <script type="text/babel" src="tweaks.jsx"></script>
-
-</body>
+    <!-- React + Babel for optional Tweaks panel -->
+    <script
+      src="https://unpkg.com/react@18.3.1/umd/react.development.js"
+      integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js"
+      integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"
+      integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/babel" src="tweaks-panel.jsx"></script>
+    <script type="text/babel" src="tweaks.jsx"></script>
+  </body>
 </html>
